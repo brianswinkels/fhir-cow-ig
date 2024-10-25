@@ -7,18 +7,24 @@ id: hl7.fhir.uv.cow
 canonical: http://hl7.org/fhir/uv/cow
 name: ClinicalOrderWorkflows
 title: Clinical Order Workflows
-description: An Implementation Guide providing the foundational guidance for order-based workflow FHIR interoperability
 status: draft # draft | active | retired | unknown
-version: 0.1.0
-fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
-copyrightYear: 2023+
-releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
-license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
-jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World"
+
 publisher:
   name: HL7 International - Orders and Observations Work Group
   url: 'http://hl7.org/Special/committees/orders'
   email: oo@lists.hl7.org
+
+jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World"
+
+description: An Implementation Guide providing the foundational guidance for order-based workflow FHIR interoperability
+license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
+date: '2024-10-25'
+version: 0.1.0
+fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
+copyrightYear: 2023+
+
+releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
+
 
 # The dependencies property corresponds to IG.dependsOn. The key is the
 # package id and the value is the version (or dev/current). For advanced
@@ -50,10 +56,11 @@ pages:
   background.md:
     title: Scope and General Principles
     generation: markdown
+  ImplementationGuide-hl7.fhir.uv.cow.md:
+    title: ImplementationGuide Resource for the COW IG
+    generation: markdown
 #  order-content.xml:
 #    title: Order Content
-
-
 
 
 # The parameters property represents IG.definition.parameter. Rather

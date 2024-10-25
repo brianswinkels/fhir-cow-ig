@@ -10,6 +10,3 @@
 
 ### Boundaries and Relationships
 
-
-### Intellectual Property Considerations
-
