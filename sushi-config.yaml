@@ -6,19 +6,19 @@
 id: hl7.fhir.uv.cow
 canonical: http://hl7.org/fhir/uv/cow
 name: ClinicalOrderWorkflows
-# title: Example Title
-# description: Example Implementation Guide for getting started with SUSHI
+title: Clinical Order Workflows
+description: An Implementation Guide providing the foundational guidance for order-based workflow FHIR interoperability
 status: draft # draft | active | retired | unknown
 version: 0.1.0
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2023+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
-# license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
-# jurisdiction: urn:iso:std:iso:3166#US "United States of America" # https://www.hl7.org/fhir/valueset-jurisdiction.html
+license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
+jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World"
 publisher:
   name: HL7 International - Orders and Observations Work Group
-  url: http://hl7.org/Special/committees/orders
-  # email: test@example.org
+  url: 'http://hl7.org/Special/committees/orders'
+  email: oo@lists.hl7.org
 
 # The dependencies property corresponds to IG.dependsOn. The key is the
 # package id and the value is the version (or dev/current). For advanced
@@ -45,7 +45,11 @@ publisher:
 #
 pages:
   index.md:
-    title: Clinical Order Worfklows - Home Page
+    title: Clinical Order Workflows - Home Page
+    generation: markdown
+  background.md:
+    title: Scope and General Principles
+    generation: markdown
 #  order-content.xml:
 #    title: Order Content
 
@@ -75,7 +79,9 @@ pages:
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Home: index.html
+  Background: background.html
   Artifacts: artifacts.html
+
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
