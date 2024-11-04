@@ -1,0 +1,1 @@
+{% include img.html img="request-bid.png" %}

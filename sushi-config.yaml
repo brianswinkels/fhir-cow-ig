@@ -54,11 +54,34 @@ pages:
     title: Clinical Order Workflows - Home Page
     generation: markdown
   background.md:
-    title: Scope and General Principles
+    title: Background - Scope and General Principles
     generation: markdown
-  ImplementationGuide-hl7.fhir.uv.cow.md:
-    title: ImplementationGuide Resource for the COW IG
+  core-concepts.md:
+    title: Core Concepts
     generation: markdown
+  patterns-overview.md:
+    title: Overview of Workflow Patterns
+    generation: markdown
+    simple-request.md:
+      title: Simple Request
+      generation: markdown
+    request-with-acceptance.md:
+      title: Request with Acceptance
+      generation: markdown
+    request-with-multiple-performers.md:
+      title: Request with Multiple Performers
+      generation: markdown
+    request-with-multiple-performers-bid.md:
+      title: Request with Multiple Performers, Bid
+      generation: markdown
+    requests-to-central-service.md:
+      title: Requests to a Central Service
+      generation: markdown
+    patient-mediated-requests.md:
+      title: Patient-Mediated Requests
+      generation: markdown
+#  Example Use Cases:
+
 #  order-content.xml:
 #    title: Order Content
 
@@ -86,7 +109,17 @@ pages:
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Home: index.html
+  Table of Contents: toc.html
   Background: background.html
+  Core Concepts: core-concepts.html
+  Workflow Patterns:
+    Overview of Workflow Patterns: patterns-overview.html
+    Simple Request: simple-request.html
+    Request with Acceptance: request-with-acceptance.html
+    Request with Multiple Performers: request-with-multiple-performers.html
+    Request with Multiple Performers, Bid: request-with-multiple-performers-bid.html
+    Requests to a Central Service: requests-to-central-service.html
+    Patient-Mediated Requests: patient-mediated-requests.html
   Artifacts: artifacts.html
 
 

@@ -1,7 +1,9 @@
 A significant part of healthcare delivery is based on workflows with many context-specific requirements. This implementation guide strives to bring together common patterns that support FHIR-based interoperability for order-based workflows.
-### Scope and Goals
 
-### Referrals, Orders, Transfers
+### Scope and Goals
+Not binding in some parts. Build on top of for jurisdictions and subject domain.
+
+### Referrals, Orders, and Transfers
 Modern healthcare delivery includes a variety of stakeholders, settings, specialties, interventions, and equipment. This often leads to overloading of terms, and lack to understanding of commonalities among healthcare processes. One example of that is how the term `referral` is used.
 
 One attempt to describe the different types of processes that may be called `referrals` can be as follows:
@@ -71,44 +73,9 @@ One attempt to describe the different types of processes that may be called `ref
     </tbody>
   </table>
 
-#### Kinds of Requests
-
-#### Common Ordering Patterns
-These high-level patterns are common in many jurisdictions. This IG uses them as a starting point to provide context in the subsequent discussions.
-
-##### Simplest Request
-
-This is the highest level description of a request and an outcome, usually described as the *Happy Path* where the user places the request, and, as if by magic, the outcome shows up in a reasonable amount of time.
-
-{% include img.html img="request-simplest.png" %}
-
-
-##### Request with Acceptance
-
-When the fulfillment of a request is not immediate, which is the usual case for cross-organizational workflows, the requestor deserves the courtesy of knowing that the known performer has received the request and is committed to fulfilling it.
-
-{% include img.html img="request-accept.png" %}
-
-##### Request with Multiple Potential Performers, First-Come, First-Claim
-
-{% include img.html img="request-claim.png" %}
-
-##### Request with Multiple Potential Performers, Bid
-
-{% include img.html img="request-bid.png" %}
-
-##### Requests to a Central Service
-
-{% include img.html img="request-central.png" %}
-
-##### Patient-Mediated Requests
-
-{% include img.html img="request-patient.png" %}
-
 ### What Is Covered and What Is Not
 
 ### Definitions
 
 ### How to Use This IG
-
 Here are the instructions for others building on top of for a jurisdiction or clinical domain.
