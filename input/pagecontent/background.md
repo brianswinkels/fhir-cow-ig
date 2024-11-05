@@ -40,6 +40,8 @@ One attempt to describe the different types of processes that may be called `ref
                 <li>Imaging referral for knee pain</li>
                 <li>Surgical Consult</li>
                 <li>Referral for physical therapy</li>
+                <li>Referral to psychiatry</li>
+                <li>Authorization to see OB/MFM</li>
               </ul>
             </li>
             <li>May be evaluative:
