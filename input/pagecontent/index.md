@@ -17,7 +17,7 @@ This guide is split into the below sections.
 - **Resource profiles** - profiles of specific resources used as part of this base guidance. 
 
 ### Boundaries and Relationships
-This guidance is intended to be universal-realm, and as such does not reference any national base or core profiling. See the general [FHIR-Worfklow]([url](https://hl7.org/fhir/workflow.html)). This guide leverages concepts from that guide and applies them to Order, Referral, and Transfer workflows. 
+This guidance is intended to be universal-realm, and as such does not reference any national base or core profiling. See the general [FHIR-Workflow](https://hl7.org/fhir/workflow.html). This guide leverages concepts from that guide and applies them to Order, Referral, and Transfer workflows. 
 
 Many of the concepts in this guide are built on top of work by the Netherlands FHIR community in their work on the Notified Pull framework which was incorporated into FHIR Subscriptions in R6, work by the Canadian FHIR community to faciliate referrals, work by BSeR to faciliate social care referrals, and earlier guidance created for Durable Medical Equipment orders. This guide also draws inspiration from work on 360X. 
 
