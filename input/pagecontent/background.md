@@ -67,7 +67,7 @@ One attempt to describe the different types of processes that may be called `ref
                 <li>Some lab in the network <em>will</em> perform this test</li>
               </ul>
             </li>
-            <li><em>Usually</em> the recipient can't refuse (but may not be able to fulfill the request for some reason, e.g. specimen condition/quantity)
+            <li><em>Usually</em> the recipient can't refuse to perform a service, although depending on the business agreements, they may be allowed to modify the request, such as by selecting a more specific service to perform. Additionally, fulfillers may indicate they are not able to fulfill the request for some reason, such as a specimen's condition or quantity.
             </li>
           </ul>
         </td>
