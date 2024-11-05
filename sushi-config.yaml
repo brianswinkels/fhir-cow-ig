@@ -81,6 +81,9 @@ pages:
       title: Patient-Mediated Requests
       generation: markdown
 #  Example Use Cases:
+  Examples.md:
+    title: Examples
+    generation: markdown
 
 #  order-content.xml:
 #    title: Order Content
@@ -120,6 +123,7 @@ menu:
     Request with Multiple Performers, Bid: request-with-multiple-performers-bid.html
     Requests to a Central Service: requests-to-central-service.html
     Patient-Mediated Requests: patient-mediated-requests.html
+  Expanded Examples: Examples.html
   Artifacts: artifacts.html
 
 
