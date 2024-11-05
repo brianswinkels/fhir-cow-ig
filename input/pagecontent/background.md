@@ -1,6 +1,6 @@
 A significant part of healthcare delivery is based on workflows with many context-specific requirements. This implementation guide strives to bring together common patterns that support FHIR-based interoperability for order-based workflows.
 
-### Scope and Goals
+### Goals
 This implementation guide is meant to provide a shared-base on which FHIR workflows for orders, referrals, and transfers may be built. The goal is to promote alignment so that lessons learned in one area may be applied quickly to others and to reduce the number of decisions and amount of development required for particular domains, thereby increasing software reusability and reducing implementation time and costs. 
 
 IGs developed for particular care domains (such as social care referrals, durable medical equipment, nursing home placement, etc.) or for particular jurisdictions may assert conformance to this IG if they leverage the same exchange patterns.
@@ -79,9 +79,6 @@ One attempt to describe the different types of processes that may be called `ref
 
 All of these workflows assume that some healthcare provider, while working with a patient, decides that some action should be taken by another provider or healthcare organization. The receiving party may or may not be allowed, based on the business agreements, to reject or to modify the request for service, and the initiating party may or may not expect to receive some information back during or after the service.
 
-### What Is Covered and What Is Not
-Orders, Referrals, and Transfers can be challenging today for many reasons. The below is informational background and may not be comprehensive. Only some of the challenges described below are addressed as part of this implementation guide. 
-
 #### Key Challenges Today:
 The below is a summary of key challenges in the referral, orders, and transfer space today, especially for cross-organizational exchanges. A primary goal of this IG is that it facilitates improvements on at least some of these areas, though (as described below) not all of these areas are addressed.
 
@@ -90,6 +87,9 @@ The below is a summary of key challenges in the referral, orders, and transfer s
 * **Requesting additional information** providers who receive a request for service may find that additional specific information is needed. That information may not laready exist in the patient's chart, and often that information of interest is not _always_ necessary to a given type of service. 
 * **Orchestration and tracking** - coordinating which actor has the baton, monitoring the overall status of a referral, managing the earlier steps, etc.
 * **Closing the loop** - sharing the outcome (and parital outcomes), such as a consult note, an imaging result, a proposed plan of care, etc. 
+
+### Scope of this IG
+Orders, Referrals, and Transfers can be challenging today for many reasons. The below is informational background and may not be comprehensive. Only some of the challenges described below are addressed as part of this implementation guide. 
 
 #### Aspects Included in this IG
 Not all of these steps apply to a given workflow for orders, transfers, or referrals, but the IG aims to provide guidance for how the following could be accomplished in FHIR
