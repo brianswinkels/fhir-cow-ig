@@ -1,1 +1,0 @@
-{% include img.html img="request-central.png" %}
