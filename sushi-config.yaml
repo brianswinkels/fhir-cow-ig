@@ -68,13 +68,13 @@ pages:
     request-with-acceptance.md:
       title: Request with Acceptance
       generation: markdown
-    request-with-multiple-performers.md:
+    request-with-multiple-potential-performers.md:
       title: Request with Multiple Potential Performers
       generation: markdown
-    request-with-multiple-performers-bid.md:
+    request-with-multiple-potential-performers--with-bidding.md:
       title: Request with Multiple Potential Performers and Bidding
       generation: markdown
-    requests-to-central-service.md:
+    requests-to-central-coordinator.md:
       title: Requests to a Central Coordinator
       generation: markdown
     patient-mediated-requests.md:
@@ -119,9 +119,9 @@ menu:
     Overview of Workflow Patterns: patterns-overview.html
     Simple Request: simple-request.html
     Request with Acceptance: request-with-acceptance.html
-    Request with Multiple Performers: request-with-multiple-performers.html
-    Request with Multiple Performers, Bid: request-with-multiple-performers-bid.html
-    Requests to a Central Service: requests-to-central-service.html
+    Request with Multiple Performers: request-with-multiple-potential-performers.html
+    Request with Multiple Performers, Bid: request-with-multiple-potential-performers-with-bidding.html
+    Requests to a Central Service: requests-to-central-coordinator.html
     Patient-Mediated Requests: patient-mediated-requests.html
   Expanded Examples: Examples.html
   Artifacts: artifacts.html
