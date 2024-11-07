@@ -14,9 +14,9 @@
 <page key="patterns-overview" name="Overview of Workflow Patterns"/>
 <page key="patient-mediated-requests" name="Patient-Mediated Requests"/>
 <page key="request-with-acceptance" name="Request with Acceptance"/>
-<page key="request-with-multiple-performers" name="Request with Multiple Performers"/>
-<page key="request-with-multiple-performers-bid" name="Request with Multiple Performers, Bid"/>
-<page key="requests-to-central-service" name="Requests to a Central Service"/>
+<page key="request-with-multiple-potential-performers" name="Request with Multiple Potential Performers"/>
+<page key="request-with-multiple-potential-performers-with-bidding" name="Request with Multiple Potential Performers and Bidding"/>
+<page key="requests-to-central-coordinator" name="Requests to a Central Coordinator"/>
 <page key="simple-request" name="Simple Request"/>
 <page key="toc" name="Table of Contents"/>
 </specification>
