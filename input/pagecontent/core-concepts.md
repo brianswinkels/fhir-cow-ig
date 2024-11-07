@@ -25,20 +25,16 @@ The differnet options for communicating notifications in FHIR address these area
 
 #### Brief Survey of Mechanisms for Pushing FHIR Content 
 Most of these mechanism are not addressed within this guide. This section is provided for context.
-
 * POST of a resource (RESTful FHIR Creates or Updates):
   + This mechanism may be used alongside others. It requires the availability of FHIR servers.
   + Actors need to pre-coordinate where FHIR resources of interest will 'live' within the exchange ecosystem, when the resources should be posted, who may update them, and under what circumstances.
   + Note that posting of a resource, while it sounds simple, may require more complex supporting transactions. For example, to POST a ServiceRequest, the client must first obtrain the FHIR ID that will be used for ServiceRequest.subject (such as a Patient's FHIR ID on the target server).
-
 * Batch or Transaction bundles:
   + These may operate similar to the RESTful Create and Update described above, but provide a mechanism for a client to submit several transactions as a set, which can minimzie some network traffic. This guide does not explore this option ind detail.
-
 * FHIR Messaging:
   + A bundle may be sent between actors based on some Event. That bundle contains a MessageHeader resource and other resources of interest.
   + Note that there is no requirement within Messaging itself (separate from our purposes in this IG) that the resources within a Message Bundle have an independent and persistent existence, or that the be surfaceable in response to a FHIR query.
   + For our purposes, we can view Messaging as providing functionality largely analagous to most event-drvien HL7 v2, where the content of the messages to be exchanged are now resources rather than PID segments, ORC segments, etc. This mechanism therefore has similar considerations, like that the sender and receiver must make tight agreements about events of interest and the content of messages. Senders should generally err on the side of sending content at a given event trigger that they expect the recipient *may* want, since (if we assume 'pure' messaging) there's no guarantee that a recipient can request or query for additional content later.
-
 * FHIR Subscriptions:
   + These can also function very similarly to HL7 v2 excanges (in which trading partners pre-coordinate events of interest, endpoitns, and the content of messages). A Subscription may exist indicating that a party would like to receive content from a server when certain events occur. Upon these triggers, a subscription-notification bundle may be sent to the party desiring data.
   + Subscriptions includes two additional features that are potentially relevant for order, referral, and transfer workflows. The first is a mechanism for a data-holder to make a "SubscriptionTopic" available to which authorized data requestors may then subscribe for updates. Data requestors can then specify their own endpoint and select from a menu of options (chosen by the data holder) the events they're interested in and the desired format of messages. The second additional capability is a standard mechanism for a data holder to indicate to a ptoential recipient how they could query for specific additional information later. For example, if a patient's insurance may change between the time a referral is created and when a service will be performed, subscriptions provide a way for a referrer to inform a fulfiller of how they can obtain the patient's Coverage information later, closer to when it is needed.    
