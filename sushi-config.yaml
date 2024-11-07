@@ -69,13 +69,13 @@ pages:
       title: Request with Acceptance
       generation: markdown
     request-with-multiple-performers.md:
-      title: Request with Multiple Performers
+      title: Request with Multiple Potential Performers
       generation: markdown
     request-with-multiple-performers-bid.md:
-      title: Request with Multiple Performers, Bid
+      title: Request with Multiple Potential Performers and Bidding
       generation: markdown
     requests-to-central-service.md:
-      title: Requests to a Central Service
+      title: Requests to a Central Coordinator
       generation: markdown
     patient-mediated-requests.md:
       title: Patient-Mediated Requests
