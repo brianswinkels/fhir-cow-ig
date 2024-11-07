@@ -1,7 +1,7 @@
-A significant part of healthcare delivery is based on workflows with many context-specific requirements. This implementation guide strives to bring together common patterns that support FHIR-based interoperability for order-based workflows.
+This implementation guide is meant to provide a shared-base on which FHIR workflows for orders, referrals, and transfers may be built.
 
 ### Goals
-This implementation guide is meant to provide a shared-base on which FHIR workflows for orders, referrals, and transfers may be built. The goal is to promote alignment so that lessons learned in one area may be applied quickly to others and to reduce the number of decisions and amount of development required for particular domains, thereby increasing software reusability and reducing implementation time and costs. 
+Our goal in creating basic guidance, even if not directly implementable, is to help initiatives focused on referrals, orders, and transfers align on core mechanisms and exchange patterns to facilitate faster and cheaper interoperability. We hope to do so by 1) reducing the number of decisions needed, 2) highlighting abstractions that allow development for one domain to apply to others, and 3) creating shared nomenclature to help spec authors define and share goals quickly. 
 
 IGs developed for particular care domains (such as social care referrals, durable medical equipment, nursing home placement, etc.) or for particular jurisdictions may assert conformance to this IG if they leverage the same exchange patterns.
 
@@ -10,7 +10,7 @@ Modern healthcare delivery includes a variety of stakeholders, settings, special
 
 One attempt to describe the different types of processes that may be called `referrals` can be as follows:
 
-<table border="1" borderspacing="0" style='border: 1px solid black; border-collapse: collapse'>
+<table border="1" borderspacing="0" style='border: 1px solid black; border-collapse: collapse'; width: 100%;>
     <thead>
       <tr class="header">
         <th>Transfer</th>
@@ -20,7 +20,7 @@ One attempt to describe the different types of processes that may be called `ref
     </thead>
     <tbody>
       <tr class="odd">
-        <td>
+        <td width: 33.33%>
           <ul>
             <li>Usually not service-specific</li>
             <li>Requestor usually does not expect an outcome after the coordination</li>
@@ -33,7 +33,7 @@ One attempt to describe the different types of processes that may be called `ref
             <li>Often includes a patient summary. May include a more specific `reason for transfer`</li>
           </ul>
         </td>
-        <td>
+        <td width: 33.33%>
           <ul>
             <li>Usually more high level:
               <ul>
@@ -57,7 +57,7 @@ One attempt to describe the different types of processes that may be called `ref
             </li>
           </ul>
         </td>
-        <td>
+        <td width: 33.33%>
           <ul>
             <li>Usually more specific:
               <ul>
