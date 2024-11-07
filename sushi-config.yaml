@@ -71,7 +71,7 @@ pages:
     request-with-multiple-potential-performers.md:
       title: Request with Multiple Potential Performers
       generation: markdown
-    request-with-multiple-potential-performers--with-bidding.md:
+    request-with-multiple-potential-performers-with-bidding.md:
       title: Request with Multiple Potential Performers and Bidding
       generation: markdown
     requests-to-central-coordinator.md:
