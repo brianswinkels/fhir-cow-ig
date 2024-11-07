@@ -10,7 +10,7 @@ Modern healthcare delivery includes a variety of stakeholders, settings, special
 
 One attempt to describe the different types of processes that may be called `referrals` can be as follows:
 
-<table border="1" borderspacing="0" style='border: 1px solid black; border-collapse: collapse'; width: 100%;>
+<table border="1" borderspacing="0" style='border: 1px solid black; border-collapse: collapse';>
     <thead>
       <tr class="header">
         <th>Transfer</th>
@@ -20,7 +20,7 @@ One attempt to describe the different types of processes that may be called `ref
     </thead>
     <tbody>
       <tr class="odd">
-        <td width: 33.33%>
+        <td>
           <ul>
             <li>Usually not service-specific</li>
             <li>Requestor usually does not expect an outcome after the coordination</li>
@@ -33,7 +33,7 @@ One attempt to describe the different types of processes that may be called `ref
             <li>Often includes a patient summary. May include a more specific `reason for transfer`</li>
           </ul>
         </td>
-        <td width: 33.33%>
+        <td>
           <ul>
             <li>Usually more high level:
               <ul>
@@ -57,7 +57,7 @@ One attempt to describe the different types of processes that may be called `ref
             </li>
           </ul>
         </td>
-        <td width: 33.33%>
+        <td>
           <ul>
             <li>Usually more specific:
               <ul>
