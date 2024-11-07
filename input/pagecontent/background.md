@@ -93,12 +93,12 @@ Orders, Referrals, and Transfers can be challenging today for many reasons. The 
 
 #### Aspects Included in this IG
 Not all of these steps apply to a given workflow for orders, transfers, or referrals, but the IG aims to provide guidance for how the following could be accomplished in FHIR
-2. **A placer notifying a [potential] fulfiller of a request**
-3. **Requestor sends an update** - this could be a cancellation of the request, additional supporting information, a demographics change of the patient, etc.
-4. **Performer sends status updates**
-5. **Performer requests additional information** - this could be a RESTful query for specific information, a letter asking for information (requiring action by the Placer), or even an instruction to the placer (such as to order and coordinate a blood test for the patient prior to service by the fulfiller). 
-6. **Performer sends outcome** - this could be a result, a consult note, etc.
-7. Corrections
+1. **A placer notifying a (potential) fulfiller of a request**
+2. **Requestor sends an update** - this could be a cancellation of the request, additional supporting information, a demographics change of the patient, etc.
+3. **Performer sends status updates**
+4. **Performer requests additional information** - this could be a RESTful query for specific information, a letter asking for information (requiring action by the Placer), or even an instruction to the placer (such as to order and coordinate a blood test for the patient prior to service by the fulfiller). 
+5. **Performer sends outcome** - this could be a result, a consult note, etc.
+6. Corrections
 
 #### Additional Pre-coordination Necessary for Push-Based Exchanges
 This is covered further in the Core Concepts page in discussing how FHIR may be leveraged for push-based workflows. 
