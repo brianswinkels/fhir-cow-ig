@@ -1,7 +1,10 @@
 This implementation guide is meant to provide a shared-base on which FHIR workflows for orders, referrals, and transfers may be built.
 
 ### Goals
-Our goal in creating basic guidance, even if not directly implementable, is to help initiatives focused on referrals, orders, and transfers align on core mechanisms and exchange patterns to facilitate faster and cheaper interoperability. We hope to do so by 1) reducing the number of decisions needed, 2) highlighting abstractions that allow development for one domain to apply to others, and 3) creating shared nomenclature to help spec authors define and share goals quickly. 
+Our goal in creating basic guidance, even if not directly implementable, is to help initiatives focused on referrals, orders, and transfers align on core mechanisms and exchange patterns to facilitate faster and cheaper interoperability. We hope to do so by:
+1. Reducing the number of decisions needed
+2. Highlighting abstractions that allow development for one domain to apply to others
+3. Creating shared nomenclature to help spec authors define and share goals quickly. 
 
 IGs developed for particular care domains (such as social care referrals, durable medical equipment, nursing home placement, etc.) or for particular jurisdictions may assert conformance to this IG if they leverage the same exchange patterns.
 
@@ -10,7 +13,7 @@ Modern healthcare delivery includes a variety of stakeholders, settings, special
 
 One attempt to describe the different types of processes that may be called `referrals` can be as follows:
 
-<table border="1" borderspacing="0" style='border: 1px solid black; border-collapse: collapse';>
+<table border="1" borderspacing="0" style='border: 1px solid black; border-collapse: collapse'>
     <thead>
       <tr class="header">
         <th>Transfer</th>
@@ -99,16 +102,6 @@ Not all of these steps apply to a given workflow for orders, transfers, or refer
 4. **Performer requests additional information** - this could be a RESTful query for specific information, a letter asking for information (requiring action by the Placer), or even an instruction to the placer (such as to order and coordinate a blood test for the patient prior to service by the fulfiller). 
 5. **Performer sends outcome** - this could be a result, a consult note, etc.
 6. Corrections
-
-#### Additional Pre-coordination Necessary for Push-Based Exchanges
-This is covered further in the Core Concepts page in discussing how FHIR may be leveraged for push-based workflows. 
-
-For any push-based exchange, the actors involved in the exchange must pre-coordinate on:
-* The endpoints to which content should be pushed
-* The events of interest for the exchange - at what workflow steps notifications should be sent between the parties
-* The expected payload of these notifications - both in terms of format and semantic content
-* Allowed business interactions - such as whether an order may be cancelled by either party once it has been scheduled
-* Procedures for error correction and remediation - whether the sender or the receiver bears responsibility for addressing an error, how to coordinate chart corrections, service desks, etc. 
 
 #### Aspects Not Covered in this IG:
 While the below areas may be important when designing full end-to-end workflows for these areas, they are either not addressed or given only superficial treatment in this IG. 
