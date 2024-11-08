@@ -103,16 +103,6 @@ Not all of these steps apply to a given workflow for orders, transfers, or refer
 5. **Performer sends outcome** - this could be a result, a consult note, etc.
 6. Corrections
 
-#### Additional Pre-coordination Necessary for Push-Based Exchanges
-This is covered further in the Core Concepts page in discussing how FHIR may be leveraged for push-based workflows. 
-
-For any push-based exchange, the actors involved in the exchange must pre-coordinate on:
-* The endpoints to which content should be pushed
-* The events of interest for the exchange - at what workflow steps notifications should be sent between the parties
-* The expected payload of these notifications - both in terms of format and semantic content
-* Allowed business interactions - such as whether an order may be cancelled by either party once it has been scheduled
-* Procedures for error correction and remediation - whether the sender or the receiver bears responsibility for addressing an error, how to coordinate chart corrections, service desks, etc. 
-
 #### Aspects Not Covered in this IG:
 While the below areas may be important when designing full end-to-end workflows for these areas, they are either not addressed or given only superficial treatment in this IG. 
 
