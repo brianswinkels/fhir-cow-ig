@@ -14,6 +14,10 @@ publisher:
   url: 'http://hl7.org/Special/committees/orders'
   email: oo@lists.hl7.org
 
+extension:
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-wg
+    valueCode: pc
+    
 jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World"
 
 description: An Implementation Guide providing the foundational guidance for order-based workflow FHIR interoperability
