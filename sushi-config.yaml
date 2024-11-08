@@ -16,7 +16,7 @@ publisher:
 
 extension:
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-wg
-    valueCode: pc
+    valueCode: oo
     
 jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World"
 
