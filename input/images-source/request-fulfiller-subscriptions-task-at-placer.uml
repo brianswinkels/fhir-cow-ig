@@ -1,55 +1,67 @@
 @startuml
+autonumber
 title Request with Fulfiller Acceptance (Subscriptions - Task at Placer)
 == 1. Create Request ==
-    Placer -> Placer: [1] Create Order, ServiceRequest, Task **per (potential) fulfiller**
-    Placer -> Placer: [2] Create Subscription for Task on potential fulfiller's channel
-    Placer -> Fulfiller: [3] POST SubscriptionStatus Notification bundle 
+    Placer -> Placer: Create Order, ServiceRequest, Task **per (potential) fulfiller**
+    Placer -> Placer: Create Subscription for Task on potential fulfiller's channel
+    Placer -> Fulfiller: POST SubscriptionStatus Notification bundle 
+    
     note over Placer, Fulfiller
     SubscriptionStatus.notificationEvent.focus is the Task. 
     Can include the ServiceRequest and other supporting
     info in the .additionalContext to save on a query
     endnote
+
     note over Placer, Fulfiller
     Task.basedOn is the ServiceRequest at the Placer. 
     Can include additional supporting info in ServiceRequest.info 
     or in the SubscriptionStatus with SubscriptionStatus.relatedQuery 
     if fulfiller specific.
     endnote
+
     note over Placer, Fulfiller
     Placer can end the Subscription to a given Fulfiller
     whenever they wish. Can also expire an authorization_base.
     endnote
-    Fulfiller -> Placer: [4] Query ServiceRequest.supportingInfo, ServiceRequest.reason, etc.
-    Fulfiller -> Placer: [5] Update Task.businessStatus'requested' => 'accepted' (or supply Plan, etc. for Bid)
+
+    Fulfiller -> Placer: Query ServiceRequest.supportingInfo, ServiceRequest.reason, etc.
+    Fulfiller -> Placer: Update Task.businessStatus'requested' => 'accepted' (or supply Plan, etc. for Bid)
+    
     note over Placer, Fulfiller
     Could also have that the Fulfiller makes a Plan / RequestOrchestration with task.input
     Then the Placer can update Task B to Accepted if they accept the Fulfiller's Proposal. 
     endnote
-group If placer will review bids 
-    Placer --> Placer: [6] Review Cancel tasks to other potential fulfiller's as needed
-    Placer -> Placer: [7] Update Task.status, Task.businessStatus, etc.
-    Placer -> Fulfiller: [8] SubscriptionStatus Notification indicating status is updated and they 'won' the bid
+
+group If Placer will review bids 
+    Placer --> Placer: Review Cancel tasks to other potential fulfiller's as needed
+    Placer -> Placer: Update Task.status, Task.businessStatus, etc.
+    Placer -> Fulfiller: SubscriptionStatus Notification indicating status is updated and they 'won' the bid
     end 
-group If fulfiller will perform a more specific service
-    Fulfiller <- Fulfiller: [9] Create ServiceRequest with ServiceRequest.basedOn pointing back to the Placer's ServiceRequest
+
+group If Fulfiller will perform a more specific service
+    Fulfiller <- Fulfiller: Create ServiceRequest with ServiceRequest.basedOn pointing back to the Placer's ServiceRequest
     end
+
 == 2. Perform Service == 
-group If fulfiller creating an output document
-    Fulfiller <- Fulfiller: [10] Performs Service, creates Output Document
-    Fulfiller -> Placer: [11] Updates Task.output == Outcome document on their servier
+
+group If Fulfiller creating an output document
+    Fulfiller <- Fulfiller: Performs Service, creates Output Document
+    Fulfiller -> Placer: Updates Task.output == Outcome document on their server
     end
+
 Placer -> Placer: Update Task and Service Request.status == Completed
     note over Placer, Fulfiller
     If Placer needs to review the outcome before confirming it's complete (like deciding whether to continue therapy), could have interim statuses. 
     endnote
+    
 group Optionally - if Placer needs to be able to surface that outcome in future
-    Placer <-> Fulfiller: [13] Read Output Document
-    Placer -> Placer: [14] Save a copy. Provenance.policy.location == Fulfiller as source of truth, and optionally meta.source 
+    Placer <-> Fulfiller: Read Output Document
+    Placer -> Placer: Save a copy. Provenance.policy.location == Fulfiller as source of truth, and optionally meta.source 
     note over Placer, Fulfiller
     The DocumentReference, DiagnosticReport etc can also point back to the ServiceRequest on the Placer's system
     endnote
     group If Placer may later attend/modify that document. Subscribe Fulfiller to their version.
-    Placer <-> Fulfiller: [15] Placer subscribes Fulfiller to their copy for sake of future updates
+    Placer <-> Fulfiller: Placer subscribes Fulfiller to their copy for sake of future updates
     end
     end
 @enduml
