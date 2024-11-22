@@ -11,7 +11,7 @@ Placer -> Fulfiller: Task.create
 note over Placer, Fulfiller: Task.basedOn points back to the ServiceRequest on the fulfiller's server.\nCan include additional supporting info in ServiceRequest.info or in the Task if Fulfiller-specific.\nPlacer can cancel that task whenever they want.
 
 Fulfiller -> Placer: Query ServiceRequest.supportingInfo, ServiceRequest.reason, etc.
-Fulfiller -> Fulfiller: Update Task.businessStatus 'requested' => Accepted
+Fulfiller <- Fulfiller: Update Task.businessStatus 'requested' => Accepted
 
 group If a message has been defined and pre-coordinated that Placer wants update
     Fulfiller -> Placer: Send Message bundle with event "Accepted"
@@ -29,19 +29,19 @@ end
 
 == 2. Perform Service ==
 group if Placer wants status updates
-    Fulfiller -> Fulfiller: check if there are interim updates Placer wants
+    Fulfiller <- Fulfiller: check if there are interim updates Placer wants
     Fulfiller -> Placer: Send Message with Update
 end
 
 group If Fulfiller creating output document
-    Fulfiller -> Fulfiller: Performs Service, creates Output Document
-    Fulfiller -> Fulfiller: Update Task.output => Output document
+    Fulfiller <- Fulfiller: Performs Service, creates Output Document
+    Fulfiller <- Fulfiller: Update Task.output => Output document
     autonumber stop
     Fulfiller -[hidden]-> Placer: extend
     autonumber resume
 end
 
-Fulfiller -> Fulfiller: Update Task.businessStatus
+Fulfiller <- Fulfiller: Update Task.businessStatus
 Fulfiller -> Placer: Send Message for Task update with .focus as the Task. Include the output document
 Placer -> Placer: Update ServiceRequest.status == Completed
 
