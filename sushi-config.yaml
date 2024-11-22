@@ -80,6 +80,13 @@ pages:
     patient-mediated-requests.md:
       title: Patient-Mediated Requests
       generation: markdown
+    Fulfiller_Initiated_Cancellations.md:
+      title: Fulfiller Initiated Cancellations + Modifications
+      generation: markdown
+    Fulfiller_Request_for_Additional_Info.md:
+      title: Fulfiller_Request_for_Additional_Info.md
+      generation: markdown
+      
 #  Example Use Cases:
   Examples.md:
     title: Examples
