@@ -19,9 +19,9 @@ FHIR provides several mechanisms for how notifications may be accomplished betwe
 * The events of interest for the exchange - at what workflow steps should notifications be sent between the parties
 * The expected payload of the notifications, both in terms of structure and semantic content. For example - a notification may be sent between two parties that is entirely self-contained, and which implicitly communicates a notification ("a result has been generated for this patient") and it's content ("no abnormal findings found"). This is analogous to HL7 v2 exchanges. Alternatively, a notification might indicate "data is ready - retrieve the data when ready based on the pre-coordinated mechanism or content in this notification".   
 * Operational business agreements - the actors involved in an exchange must agree to business practices, such as whether a fulfiller must confirm their ability to perform a service, when and how a placer may cancel or modify a request for service after a fulfiller has accepted it, etc. 
-* Proecedures for error correction and remediation - whether the sender or the receiver bears responsibility for addressing an error, how to coordinate chart corrections, service desks, etc. 
+* Procedures for error correction and remediation - whether the sender or the receiver bears responsibility for addressing an error, how to coordinate chart corrections, service desks, etc. 
 
-The differnet options for communicating notifications in FHIR address these areas in different ways. 
+The different options for communicating notifications in FHIR address these areas in different ways. 
 
 #### Brief Survey of Mechanisms for Pushing FHIR Content 
 Most of these mechanism are not addressed within this guide. This section is provided for context.
