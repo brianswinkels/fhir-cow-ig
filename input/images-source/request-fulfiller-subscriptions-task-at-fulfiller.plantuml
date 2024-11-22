@@ -1,4 +1,5 @@
 @startuml
+skinparam svgDimensionStyle false
 autonumber
 title Request with Fulfiller Acceptance (Subscriptions - Task at Fulfiller)
 == 1. Create Request ==
@@ -32,15 +33,15 @@ title Request with Fulfiller Acceptance (Subscriptions - Task at Fulfiller)
 
 Placer -> Placer: Update status of Tracking if needed
 
-group If Fulfiller will perform a more specific service
+opt If Fulfiller will perform a more specific service
     Fulfiller <- Fulfiller: Create ServiceRequest with ServiceRequest.basedOn pointing back to the Placer's ServiceRequest
-    end
+end
     
 == 2. Perform Service == 
 group If fulfiller creating an output document
     Fulfiller <- Fulfiller: Performs Service, creates Output Document
     Fulfiller <- Fulfiller: Updates Task B - Task.output == Outcome document
-    end
+end
 
 Fulfiller <- Fulfiller: Update Task.businessStatus
 
