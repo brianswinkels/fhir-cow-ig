@@ -4,10 +4,10 @@ If the performer declines to perform the service (or fails to respond within a p
 
 {% include img.html img="request-accept.png" %}
 
-<div> {% include request-subscriptions-task-at-fulfiller.svg %} </div>
+<div> {% include request-fulfiller-subscriptions-task-at-fulfiller.svg %} </div>
 <br clear="all"/>
 
-<div> {% include request-fulfiller-rest-task-at-placer.svg %}</div>
+<div> {% include request-fulfiller-messaging-rest-task-at-placer.svg %}</div>
 <br clear="all"/>
 
 <div> {% include request-fulfiller-subscriptions-task-at-fulfiller.svg %}</div>
