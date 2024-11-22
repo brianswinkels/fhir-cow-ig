@@ -4,6 +4,8 @@ If the performer declines to perform the service (or fails to respond within a p
 
 {% include img.html img="request-accept.png" %}
 
+
+TODO: Swap these out for the simple examples just for request with acceptance
 <div> {% include request-fulfiller-subscriptions-task-at-fulfiller.svg %} </div>
 <br clear="all"/>
 
