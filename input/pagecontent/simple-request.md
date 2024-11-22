@@ -3,3 +3,15 @@ In the most simple flow, a provider creates a request and instructs a fulfiller 
 Based on the workflow of interest, the performer may or may not notify the requestor of an 'outcome' at a later time. 
 
 {% include img.html img="request-simplest.png" %}
+
+@startuml
+autonumber
+skinparam sequenceMessageAlign center
+
+Bob -> Alice : hello
+
+Alice -> Bob 
+
+Alice <- Alice : //Test message//
+
+@enduml
