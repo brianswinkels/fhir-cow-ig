@@ -25,7 +25,7 @@ The below is a general overview of how Subscriptions could be used with the coor
 The below is a general overview of how Messaging + REST  could be used with the coordinating Task hosted at the Placer. Many details are only alluded to in this draft. 
 
 <figure>
-  {% include Subscription_General_Example_Task_at_Placer.svg %} 
+  {% include Messaging_+_REST_General_Task_at_Placer.svg %} 
 </figure>
 
 ### Overview Example - Messaging + REST with Task at Fulfiller
