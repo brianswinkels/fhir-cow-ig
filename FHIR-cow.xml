@@ -12,13 +12,14 @@
 <page key="core-concepts" name="Core Concepts"/>
 <page key="Examples" name="Examples"/>
 <page key="Fulfiller_Initiated_Cancellations" name="Fulfiller Initiated Cancellations + Modifications"/>
-<page key="Fulfiller_Request_for_Additional_Info" name="Fulfiller_Request_for_Additional_Info.md"/>
+<page key="Fulfiller_Request_for_Additional_Info" name="Fulfiller Request for Additional Info"/>
 <page key="patterns-overview" name="Overview of Workflow Patterns"/>
 <page key="patient-mediated-requests" name="Patient-Mediated Requests"/>
 <page key="request-with-acceptance" name="Request with Acceptance"/>
 <page key="request-with-multiple-potential-performers" name="Request with Multiple Potential Performers"/>
 <page key="request-with-multiple-potential-performers-with-bidding" name="Request with Multiple Potential Performers and Bidding"/>
 <page key="requests-to-central-coordinator" name="Requests to a Central Coordinator"/>
+<page key="sharing-outputs" name="Sharing Outputs from a Referral or Order"/>
 <page key="simple-request" name="Simple Request"/>
 <page key="toc" name="Table of Contents"/>
 </specification>
