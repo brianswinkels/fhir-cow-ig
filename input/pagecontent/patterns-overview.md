@@ -9,3 +9,19 @@ This section describes several high-level patterns of interaction for order, ref
 * A request to a central coordinator who will assign the request to a performer, and notify the requestor of who will fulfill the request.
 * TODO: A request to a central coordinator, who will assign the request to a performer and additionally mediate further communication between the requestor and performer.
 * A request authorized by a prescriber, which a patient then uses to seek service at a place of their choosing.
+
+
+### Overview Example - Subscriptions with Task at Placer
+The below is a general overview of how Subscriptions could be used with the coordinating Task hosted at the Placer. Many details are only alluded to in this draft. 
+{% include Subscription_General_Example_Task_at_Placer.svg %} 
+
+### Overview Example - Subscriptions with Task at Fulfiller
+
+### Overview Example - Messaging + REST with Task at Placer
+The below is a general overview of how Messaging + REST  could be used with the coordinating Task hosted at the Placer. Many details are only alluded to in this draft. 
+
+{% include Subscription_General_Example_Task_at_Placer.svg %} 
+
+### Overview Example - Messaging + REST with Task at Fulfiller
+
+### Overview Example - Messaging
