@@ -15,14 +15,18 @@ This section describes several high-level patterns of interaction for order, ref
 The below is a general overview of how Subscriptions could be used with the coordinating Task hosted at the Placer. Many details are only alluded to in this draft. 
 
 
-<div>{% include Subscription_General_Example_Task_at_Placer.svg %} </div>
+<figure>
+  {% include Subscription_General_Example_Task_at_Placer.svg %} 
+</figure>
 
 ### Overview Example - Subscriptions with Task at Fulfiller
 
 ### Overview Example - Messaging + REST with Task at Placer
 The below is a general overview of how Messaging + REST  could be used with the coordinating Task hosted at the Placer. Many details are only alluded to in this draft. 
 
-<div>{% include Subscription_General_Example_Task_at_Placer.svg %} </div>
+<figure>
+  {% include Subscription_General_Example_Task_at_Placer.svg %} 
+</figure>
 
 ### Overview Example - Messaging + REST with Task at Fulfiller
 
