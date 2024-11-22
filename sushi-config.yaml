@@ -65,13 +65,6 @@ pages:
     generation: markdown
   patterns-overview.md:
     title: Overview of Workflow Patterns
-    title: Background - Scope and General Principles
-    generation: markdown
-  core-concepts.md:
-    title: Core Concepts
-    generation: markdown
-  patterns-overview.md:
-    title: Overview of Workflow Patterns
     generation: markdown
     simple-request.md:
       title: Simple Request
@@ -134,7 +127,6 @@ pages:
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Home: index.html
-  Table of Contents: toc.html
   Table of Contents: toc.html
   Background: background.html
   Core Concepts: core-concepts.html
