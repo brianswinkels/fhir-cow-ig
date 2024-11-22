@@ -1,4 +1,4 @@
-Many locales and care domains rely on a central coordinator to manage some aspects of an order, referral, or transfer workflow. In these flows, a requestor notifies a central management group that they have a service which must be performed, and that central managment group may then triage, notify performers, assign providers, etc.
+Many locales and care domains rely on a central coordinator to manage some aspects of an order, referral, or transfer workflow. In these flows, a requestor notifies a central management group that they have a service which must be performed, and that central management group may then triage, notify performers, assign providers, etc.
 
 Details may vary considerably by business agreements (such as whether the coordinator may _assign_ a request to a performer, or merely notify them) and architecture.
 

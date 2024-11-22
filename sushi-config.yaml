@@ -14,6 +14,10 @@ publisher:
   url: 'http://hl7.org/Special/committees/orders'
   email: oo@lists.hl7.org
 
+extension:
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-wg
+    valueCode: oo
+    
 jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World"
 
 description: An Implementation Guide providing the foundational guidance for order-based workflow FHIR interoperability
@@ -61,6 +65,13 @@ pages:
     generation: markdown
   patterns-overview.md:
     title: Overview of Workflow Patterns
+    title: Background - Scope and General Principles
+    generation: markdown
+  core-concepts.md:
+    title: Core Concepts
+    generation: markdown
+  patterns-overview.md:
+    title: Overview of Workflow Patterns
     generation: markdown
     simple-request.md:
       title: Simple Request
@@ -95,6 +106,7 @@ pages:
     title: Examples
     generation: markdown
 
+
 #  order-content.xml:
 #    title: Order Content
 
@@ -122,6 +134,7 @@ pages:
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Home: index.html
+  Table of Contents: toc.html
   Table of Contents: toc.html
   Background: background.html
   Core Concepts: core-concepts.html
