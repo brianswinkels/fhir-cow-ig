@@ -4,7 +4,7 @@ Based on the workflow of interest, the performer may or may not notify the reque
 
 {% include img.html img="request-simplest.png" %}
 
-@startuml
+'''plantuml
 autonumber
 skinparam sequenceMessageAlign center
 
@@ -13,5 +13,4 @@ Bob -> Alice : hello
 Alice -> Bob 
 
 Alice <- Alice : //Test message//
-
-@enduml
+'''
