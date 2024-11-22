@@ -3,9 +3,9 @@ Many locales and care domains rely on a central coordinator to manage some aspec
 Details may vary considerably by business agreements (such as whether the coordinator may _assign_ a request to a performer, or merely notify them) and architecture.
 
 Some common reasons for a central coordinator include:
-* Facilitating triage of scare resources
+* Facilitating triage of scarce resources
 * Managing waitlists
-* Facilitating in some parts of the exchange like endpoint discovery and client registration
+* Facilitating some parts of the exchange like endpoint discovery and client registration
 
 Later sections of this guide include details for a FHIR implementation to minimize the extent to which a requestor must be 'aware' of whether they are interacting with a central coordinator or a fulfiller. 
 

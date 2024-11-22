@@ -3,7 +3,10 @@ When a requestor can't be certain of whether the fulfiller will be willing to pe
 If the performer declines to perform the service (or fails to respond within a pre-coordinated period), the requestor may choose to follow up with other potential performers. 
 
 {% include img.html img="request-accept.png" %}
-<br clear="all"/>
+
+
+TODO: Swap these out for the simple examples just for request with acceptance
+
 
 <div class="panel panel-default">
   <div class="panel-heading">

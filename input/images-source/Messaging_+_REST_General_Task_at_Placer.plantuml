@@ -1,4 +1,5 @@
 @startuml
+skinparam svgDimensionStyle false
 title Referrals - Messaging w/ Task at Fulfiller General
 
 autonumber

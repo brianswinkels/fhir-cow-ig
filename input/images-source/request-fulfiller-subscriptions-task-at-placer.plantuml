@@ -1,6 +1,7 @@
 @startuml
 skinparam svgDimensionStyle false
 autonumber
+skinparam svgDimensionStyle false
 title Request with Fulfiller Acceptance (Subscriptions - Task at Placer)
 == 1. Create Request ==
     Placer -> Placer: Create Order, ServiceRequest, Task **per (potential) fulfiller**

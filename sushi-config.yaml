@@ -84,7 +84,10 @@ pages:
       title: Fulfiller Initiated Cancellations + Modifications
       generation: markdown
     Fulfiller_Request_for_Additional_Info.md:
-      title: Fulfiller_Request_for_Additional_Info.md
+      title: Fulfiller Request for Additional Info
+      generation: markdown
+    sharing-outputs.md:
+      title: Sharing Outputs from a Referral or Order
       generation: markdown
       
 #  Example Use Cases:
@@ -130,6 +133,10 @@ menu:
     Request with Multiple Performers, Bid: request-with-multiple-potential-performers-with-bidding.html
     Requests to a Central Service: requests-to-central-coordinator.html
     Patient-Mediated Requests: patient-mediated-requests.html
+    Fulfiller Initiated Cancellations: Fulfiller_Initiated_Cancellations.html
+    Fulfiller Requests for Additional Info: Fulfiller_Request_for_Additional_Info.html
+    Sharing Outputs of Referrals and Orders: sharing-outputs.html
+    
   Examples: Examples.html
   Artifacts: artifacts.html
 

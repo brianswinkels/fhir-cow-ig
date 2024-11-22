@@ -1,5 +1,6 @@
 @startuml
 autonumber
+skinparam svgDimensionStyle false
 skinparam sequenceMessageAlign center
 
 == Create Request ==
