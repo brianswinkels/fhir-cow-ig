@@ -13,12 +13,12 @@ Modern healthcare delivery includes a variety of stakeholders, settings, special
 
 One attempt to describe the different types of processes that may be called `referrals` can be as follows:
 
-<table border="1" borderspacing="0" style='border: 1px solid black; border-collapse: collapse'>
+<table border="1" borderspacing="0" style='border: 1px solid black; border-collapse: collapse' class="table">
     <thead>
       <tr class="header">
-        <th>Transfer</th>
-        <th>Referral</th>
-        <th>Order</th>
+        <th class="col-1">Transfer</th>
+        <th class="col-1">Referral</th>
+        <th class="col-1">Order</th>
       </tr>
     </thead>
     <tbody>

@@ -65,6 +65,13 @@ pages:
     generation: markdown
   patterns-overview.md:
     title: Overview of Workflow Patterns
+    title: Background - Scope and General Principles
+    generation: markdown
+  core-concepts.md:
+    title: Core Concepts
+    generation: markdown
+  patterns-overview.md:
+    title: Overview of Workflow Patterns
     generation: markdown
     simple-request.md:
       title: Simple Request
@@ -84,10 +91,21 @@ pages:
     patient-mediated-requests.md:
       title: Patient-Mediated Requests
       generation: markdown
+    Fulfiller_Initiated_Cancellations.md:
+      title: Fulfiller Initiated Cancellations + Modifications
+      generation: markdown
+    Fulfiller_Request_for_Additional_Info.md:
+      title: Fulfiller Request for Additional Info
+      generation: markdown
+    sharing-outputs.md:
+      title: Sharing Outputs from a Referral or Order
+      generation: markdown
+      
 #  Example Use Cases:
   Examples.md:
     title: Examples
     generation: markdown
+
 
 #  order-content.xml:
 #    title: Order Content
@@ -117,6 +135,7 @@ pages:
 menu:
   Home: index.html
   Table of Contents: toc.html
+  Table of Contents: toc.html
   Background: background.html
   Core Concepts: core-concepts.html
   Workflow Patterns:
@@ -127,7 +146,11 @@ menu:
     Request with Multiple Performers, Bid: request-with-multiple-potential-performers-with-bidding.html
     Requests to a Central Service: requests-to-central-coordinator.html
     Patient-Mediated Requests: patient-mediated-requests.html
-  Expanded Examples: Examples.html
+    Fulfiller Initiated Cancellations: Fulfiller_Initiated_Cancellations.html
+    Fulfiller Requests for Additional Info: Fulfiller_Request_for_Additional_Info.html
+    Sharing Outputs of Referrals and Orders: sharing-outputs.html
+    
+  Examples: Examples.html
   Artifacts: artifacts.html
 
 
