@@ -7,8 +7,8 @@ This IG describes actions between those who create requests for service and thos
 * Patient - this is the person to whom a service will be given, or on whom a service will be performed. In many interaction diagrams, "Patient" may also be a stand-in for a patient's healthcare agent or some other non-healthcare decision maker who helps to coordinate the patient's care. For example, a young patient's parent may help to coordinate where that patient will receive care. 
 
 ### Tasks, Requests, and Outputs Events
-* A **Request** is the FHIR representation of the request for action being created, proposed, and/or authorized by a placer. This includes at least minimal information about the action to be performed, its overall status, and links to supporting information.
-* A **Task** can serve many purposes. In this IG, Tasks serve a core role of helping a placer and a _specific_, *potential*, or *eventual* fulfiller manage the status of a request (in scenarios where FHIR servers are used). Many Tasks may correspond to the same ServiceRequest, and (for the purposes of coordination) separate sets of Tasks are generated for each potential fulfiller.  
+* **Request** resources are the FHIR representation of the request for action being created, proposed, and/or authorized by a placer. This includes at least minimal information about the action to be performed, its overall status, and links to supporting information.
+* **Task** resources can serve many purposes. In this IG, Tasks serve a core role of helping a placer and a _specific_, *potential*, or *eventual* fulfiller manage the status of a request (in scenarios where FHIR servers are used). Many Tasks may correspond to the same ServiceRequest, and (for the purposes of coordination) separate sets of Tasks are generated for each potential fulfiller.  
 * **Output Events** - requests for action may result in a variety of output events, each with their own representation in FHIR. For the purposes of this IG, we refer to these generically without specifying their form. Example outputs that could be generated include a DocumentReference for a Consult Note, a DiagnosticReport and set of Observations for a lab, a CarePlan describing proposed care, or even new ServiceRequests. In scenarios with FHIR servers, this IG specifies that Outputs may be linked back to an originating ServiceRequest via Task.Output, where the Tasks (eventually) point back to a ServiceRequest via Task.BasedOn and ServiceRequest.basedOn.
 
 ### Pre-Coordination Needed for Push-Based Exchanges
@@ -39,22 +39,3 @@ Most of these mechanism are not addressed within this guide. This section is pro
   + These can also function very similarly to HL7 v2 exchanges (in which trading partners pre-coordinate events of interest, endpoints, and the content of messages). A Subscription may exist indicating that a party would like to receive content from a server when certain events occur. Upon these triggers, a subscription-notification bundle may be sent to the party desiring data.
   + Subscriptions includes two additional features that are potentially relevant for order, referral, and transfer workflows. The first is a mechanism for a data-holder to make a "SubscriptionTopic" available to which authorized data requestors may then subscribe for updates. Data requestors can then specify their own endpoint and select from a menu of options (chosen by the data holder) the events they're interested in and the desired format of messages. The second additional capability is a standard mechanism for a data holder to indicate to a potential recipient how they could query for specific additional information later. For example, if a patient's insurance may change between the time a referral is created and when a service will be performed, subscriptions provide a way for a referrer to inform a fulfiller of how they can obtain the patient's Coverage information later, closer to when it is needed.    
   
-### Basic workflow
-
-### Basic workflow in FHIR
-
-### More complicated workflows we may need
-
-#### Ability to bid
-
-#### Multiple fulfillers
-
-#### Ability for fulfiller to reject
-
-#### Output document
-
-#### Ability for placer to edit and host output document
-
-### Bigger scarier FHIR workflow without too much guidance
-
-### Promise to explain in more detail on later pages

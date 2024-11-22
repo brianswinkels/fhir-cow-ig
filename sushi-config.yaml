@@ -80,6 +80,13 @@ pages:
     patient-mediated-requests.md:
       title: Patient-Mediated Requests
       generation: markdown
+    Fulfiller_Initiated_Cancellations.md:
+      title: Fulfiller Initiated Cancellations + Modifications
+      generation: markdown
+    Fulfiller_Request_for_Additional_Info.md:
+      title: Fulfiller_Request_for_Additional_Info.md
+      generation: markdown
+      
 #  Example Use Cases:
   Examples.md:
     title: Examples
@@ -123,7 +130,7 @@ menu:
     Request with Multiple Performers, Bid: request-with-multiple-potential-performers-with-bidding.html
     Requests to a Central Service: requests-to-central-coordinator.html
     Patient-Mediated Requests: patient-mediated-requests.html
-  Expanded Examples: Examples.html
+  Examples: Examples.html
   Artifacts: artifacts.html
 
 

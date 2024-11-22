@@ -3,3 +3,12 @@ When a reqeustor can't be certain of whether the fulfiller will be willing to pe
 If the performer declines to perform the service (or fails to respond within a pre-coordinated period), the requestor may choose to follow up with other potential performers. 
 
 {% include img.html img="request-accept.png" %}
+
+<div> {% include request-fulfiller-subscriptions-task-at-fulfiller.svg %} </div>
+<br clear="all"/>
+
+<div> {% include request-fulfiller-messaging-rest-task-at-placer.svg %}</div>
+<br clear="all"/>
+
+<div> {% include request-fulfiller-subscriptions-task-at-fulfiller.svg %}</div>
+<br clear="all"/>
