@@ -39,22 +39,3 @@ Most of these mechanism are not addressed within this guide. This section is pro
   + These can also function very similarly to HL7 v2 exchanges (in which trading partners pre-coordinate events of interest, endpoints, and the content of messages). A Subscription may exist indicating that a party would like to receive content from a server when certain events occur. Upon these triggers, a subscription-notification bundle may be sent to the party desiring data.
   + Subscriptions includes two additional features that are potentially relevant for order, referral, and transfer workflows. The first is a mechanism for a data-holder to make a "SubscriptionTopic" available to which authorized data requestors may then subscribe for updates. Data requestors can then specify their own endpoint and select from a menu of options (chosen by the data holder) the events they're interested in and the desired format of messages. The second additional capability is a standard mechanism for a data holder to indicate to a potential recipient how they could query for specific additional information later. For example, if a patient's insurance may change between the time a referral is created and when a service will be performed, subscriptions provide a way for a referrer to inform a fulfiller of how they can obtain the patient's Coverage information later, closer to when it is needed.    
   
-### Basic workflow
-
-### Basic workflow in FHIR
-
-### More complicated workflows we may need
-
-#### Ability to bid
-
-#### Multiple fulfillers
-
-#### Ability for fulfiller to reject
-
-#### Output document
-
-#### Ability for placer to edit and host output document
-
-### Bigger scarier FHIR workflow without too much guidance
-
-### Promise to explain in more detail on later pages
