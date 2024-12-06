@@ -84,8 +84,11 @@ pages:
     patient-mediated-requests.md:
       title: Patient-Mediated Requests
       generation: markdown
-    Fulfiller_Initiated_Cancellations.md:
-      title: Fulfiller Initiated Cancellations + Modifications
+    Tracking-Request-State.md:
+      title: Representing the Status of a Request
+      generation: markdown
+    Cancelling-and-Modifying-Requests.md:
+      title: Cancelling and Modifying Requests
       generation: markdown
     Fulfiller_Request_for_Additional_Info.md:
       title: Fulfiller Request for Additional Info
@@ -129,7 +132,7 @@ menu:
   Home: index.html
   Table of Contents: toc.html
   Background: background.html
-  Core Concepts: core-concepts.html
+  Core Concepts: core-concepts.html 
   Workflow Patterns:
     Overview of Workflow Patterns: patterns-overview.html
     Simple Request: simple-request.html
@@ -138,7 +141,8 @@ menu:
     Request with Multiple Performers, Bid: request-with-multiple-potential-performers-with-bidding.html
     Requests to a Central Service: requests-to-central-coordinator.html
     Patient-Mediated Requests: patient-mediated-requests.html
-    Fulfiller Initiated Cancellations: Fulfiller_Initiated_Cancellations.html
+    Representing The Status of a Request: Tracking-Request-State.html
+    Cancelling and Modifying Requests: Cancelling-and-Modifying-Requests.html
     Fulfiller Requests for Additional Info: Fulfiller_Request_for_Additional_Info.html
     Sharing Outputs of Referrals and Orders: sharing-outputs.html
     
