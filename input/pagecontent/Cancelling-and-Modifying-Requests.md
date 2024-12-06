@@ -1,4 +1,4 @@
-## Cancellations and Modifications to In-Flight Requests
+## Cancellations and Modifications of In-Flight Requests
 
 
 ### Placer Initiated Cancellations
