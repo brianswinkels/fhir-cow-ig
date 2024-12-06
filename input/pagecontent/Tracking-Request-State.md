@@ -12,6 +12,7 @@ This section describes how the status of a request may be tracked. The guidance 
 
 ### New Request to Fulfiller
 
+### Fufliller Awaiting Information
 
 ### Fulfiller-Accepted Request
 
