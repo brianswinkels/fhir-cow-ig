@@ -13,16 +13,6 @@ Machine]([url](https://build.fhir.org/workflow-communications.html#12.10.2)) and
     <th class="col-1">FHIR Representation</th>
   </tr></thead>
 <tbody>
-  <tr class="odd">
-    <td>Drafted/Pended</td>
-    <td>*Not set*<br><br></td>
-    <td>Service Request<br>- Status: draft</td>
-  </tr>
-  <tr>
-    <td>Proposed</td>
-    <td>*Not set*</td>
-    <td>ServiceRequest<br>- Status: active<br>- Intent: proposal/plan<br>- 0..* Input</td>
-  </tr>
   <tr>
     <td>First Placed (no <br>designated performer)</td>
     <td>*Not set*</td>
@@ -82,5 +72,39 @@ Machine]([url](https://build.fhir.org/workflow-communications.html#12.10.2)) and
     <td></td>
     <td>Corrected</td>
     <td></td>
+  </tr>
+</tbody></table>
+
+## Placer Initiated Cancellation
+This is equivalent to the normal flow through the step that an intended performer has been selected. This step assumes that the service provider has not already begun service. 
+
+<table border="1" borderspacing="0" style='border: 1px solid black; border-collapse: collapse' class="table"><thead>
+  <tr class="header">
+    <th class="col-1">Workflow State to Represent</th>
+    <th class="col-1">Output State</th>
+    <th class="col-1">FHIR Representation</th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td>Placer Initiates Cancellation<br>(Before performance)</td>
+    <td>*Not set*<br><br></td>
+    <td>ServiceRequest<br>- Status: Revoked<br><br><br>1..* Task:<br>- Status: cancelled<br>- Code: fulfil<br>- Intent: order<br>- Focus: [the ServiceRequest]<br><br>OR - if a placer can't cancel on their own, BusinessStatus of CancelRequested? <br>Or a New Task with:<br><br><br>New Task:<br>- Status: Requested<br>- Code: Abort<br>- Input: [original Task]</td>
+  </tr>
+</tbody></table>
+
+## Fulfiller Decline to Perform
+This flow is equivalent to the normal flow up to the point that a placer first notifies a potential fulfiller of a service request. In this flow, a fulfiller declines to perform the service, and may or may not specify a reason. 
+
+<table border="1" borderspacing="0" style='border: 1px solid black; border-collapse: collapse' class="table"><thead>
+  <tr class="header">
+    <th class="col-1">Workflow State to Represent</th>
+    <th class="col-1">Output State</th>
+    <th class="col-1">FHIR Representation</th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td>Fulfiller Declines Request</td>
+    <td>*Not set*<br><br></td>
+    <td>ServiceRequest:<br>- Status: active<br>- Intent: order<br><br>1 Task:<br>- Status: rejected<br>- Performer: [specified]<br>- Code: fulfill<br>- Intent: order</td>
   </tr>
 </tbody></table>
