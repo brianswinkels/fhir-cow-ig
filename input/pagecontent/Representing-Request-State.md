@@ -15,7 +15,7 @@ Machine]([url](https://build.fhir.org/workflow-communications.html#12.10.2)) and
   <tr>
     <td class="tg-0pky">Drafted/Pended</td>
     <td class="tg-0pky"><span style="font-style:italic">*Not set*</span><br><br></td>
-    <td class="tg-0pky">Service Request<br>- Status: draft</td>
+    <td class="tg-0pky">Service Request<br>* Status: draft</td>
   </tr>
   <tr>
     <td class="tg-0pky">Proposed</td>
