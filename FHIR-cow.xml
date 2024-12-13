@@ -8,13 +8,15 @@
 <page key="many" name="(many)"/>
 <page key="artifacts" name="Artifacts Summary"/>
 <page key="background" name="Background - Scope and General Principles"/>
+<page key="Cancelling-and-Modifying-Requests" name="Cancelling and Modifying Requests"/>
 <page key="index" name="Clinical Order Workflows - Home Page"/>
+<page key="Representing-Request-State" name="Communicating the Status of a Request"/>
 <page key="core-concepts" name="Core Concepts"/>
 <page key="Examples" name="Examples"/>
-<page key="Fulfiller_Initiated_Cancellations" name="Fulfiller Initiated Cancellations + Modifications"/>
 <page key="Fulfiller_Request_for_Additional_Info" name="Fulfiller Request for Additional Info"/>
 <page key="patterns-overview" name="Overview of Workflow Patterns"/>
 <page key="patient-mediated-requests" name="Patient-Mediated Requests"/>
+<page key="Tracking-Request-State" name="Representing the Status of a Request"/>
 <page key="request-with-acceptance" name="Request with Acceptance"/>
 <page key="request-with-multiple-potential-performers" name="Request with Multiple Potential Performers"/>
 <page key="request-with-multiple-potential-performers-with-bidding" name="Request with Multiple Potential Performers and Bidding"/>
