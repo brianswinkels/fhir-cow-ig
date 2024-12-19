@@ -63,9 +63,9 @@ pages:
   core-concepts.md:
     title: Core Concepts
     generation: markdown
-    Representing-Request-State.md:
-      title: Communicating the Status of a Request
-      generation: markdown
+  Representing-Request-State.md:
+    title: Communicating the Status of a Request
+    generation: markdown
   patterns-overview.md:
     title: Overview of Workflow Patterns
     generation: markdown
@@ -86,9 +86,6 @@ pages:
       generation: markdown
     patient-mediated-requests.md:
       title: Patient-Mediated Requests
-      generation: markdown
-    Tracking-Request-State.md:
-      title: Representing the Status of a Request
       generation: markdown
     Cancelling-and-Modifying-Requests.md:
       title: Cancelling and Modifying Requests
@@ -146,8 +143,7 @@ menu:
     Request with Multiple Performers, Bid: request-with-multiple-potential-performers-with-bidding.html
     Requests to a Central Service: requests-to-central-coordinator.html
     Patient-Mediated Requests: patient-mediated-requests.html
-    Representing the Status of a Request: Tracking-Request-State.html
-    Fulfiller Initiated Cancellations: Fulfiller_Initiated_Cancellations.html
+    Cancelling and Modifying Requests: Cancelling-and-Modifying-Requests.html
     Fulfiller Requests for Additional Info: Fulfiller_Request_for_Additional_Info.html
     Sharing Outputs of Referrals and Orders: sharing-outputs.html
     
