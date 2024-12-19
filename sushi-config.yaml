@@ -63,9 +63,9 @@ pages:
   core-concepts.md:
     title: Core Concepts
     generation: markdown
-    Representing-Request-State.md:
-      title: Communicating the Status of a Request
-      generation: markdown
+  Representing-Request-State.md:
+    title: Communicating the Status of a Request
+    generation: markdown
   patterns-overview.md:
     title: Overview of Workflow Patterns
     generation: markdown

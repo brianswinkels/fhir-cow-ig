@@ -1,4 +1,4 @@
-## Overview of actors
+### Overview of actors
 
 This IG describes actions between those who create requests for service and those who perform services. A variety of terms are used. For our purposes:
 
@@ -6,12 +6,12 @@ This IG describes actions between those who create requests for service and thos
 * Performer and fulfiller may be considered equivalent. In many contexts, these actors may also be thought of as *potential* fulfillers or performers. This is excluded in most places for brevity unless the distinction may lead to confusion.
 * Patient - this is the person to whom a service will be given, or on whom a service will be performed. In many interaction diagrams, "Patient" may also be a stand-in for a patient's healthcare agent or some other non-healthcare decision maker who helps to coordinate the patient's care. For example, a young patient's parent may help to coordinate where that patient will receive care. 
 
-## Tasks, Requests, and Outputs Events
+### Tasks, Requests, and Outputs Events
 * **Request** resources are the FHIR representation of the request for action being created, proposed, and/or authorized by a placer. This includes at least minimal information about the action to be performed, its overall status, and links to supporting information.
 * **Task** resources can serve many purposes. In this IG, Tasks serve a core role of helping a placer and a _specific_, *potential*, or *eventual* fulfiller manage the status of a request (in scenarios where FHIR servers are used). Many Tasks may correspond to the same ServiceRequest, and (for the purposes of coordination) separate sets of Tasks are generated for each potential fulfiller.  
 * **Output Events** - requests for action may result in a variety of output events, each with their own representation in FHIR. For the purposes of this IG, we refer to these generically without specifying their form. Example outputs that could be generated include a DocumentReference for a Consult Note, a DiagnosticReport and set of Observations for a lab, a CarePlan describing proposed care, or even new ServiceRequests. In scenarios with FHIR servers, this IG specifies that Outputs may be linked back to an originating ServiceRequest via Task.Output, where the Tasks (eventually) point back to a ServiceRequest via Task.BasedOn and ServiceRequest.basedOn.
 
-## Pre-Coordination Needed for Push-Based Exchanges
+### Pre-Coordination Needed for Push-Based Exchanges
 A core focus for this guide is to describe how notifications may be communicated between the actors involved in an order, referral, or transfer, and to provide guidance to help spec authors building on top of this IG manage these notifications in a consistent way.
 
 FHIR provides several mechanisms for how notifications may be accomplished between two actors, and in many contexts the important part is that they align. At a high-level, regardless of the specific FHIR mechanism chosen, all 'push' based exchanges require pre-coordination to define:
@@ -23,7 +23,7 @@ FHIR provides several mechanisms for how notifications may be accomplished betwe
 
 The different options for communicating notifications in FHIR address these areas in different ways. 
 
-### Brief Survey of Mechanisms for Pushing FHIR Content 
+#### Brief Survey of Mechanisms for Pushing FHIR Content 
 Most of these mechanism are not addressed within this guide. This section is provided for context.
 * POST of a resource (RESTful FHIR Creates or Updates):
   + This mechanism may be used alongside others. It requires the availability of FHIR servers.

@@ -1,9 +1,9 @@
-## Representing the State of a Request for Service
+### Representing the State of a Request for Service
 
 The below represents a 'normal flow' for tracking the status of a request. Not all of these states states will apply to all workflows or use-cases. This guidance builds on the [Task State 
 Machine]([url](https://build.fhir.org/workflow-communications.html#12.10.2)) and is intended to provide a way to communicate the status of a request regardless of the choice of FHIR exhcange mechanism.
 
-## Normal Flow
+### Normal Flow
 
 <table border="1" borderspacing="0" style='border: 1px solid black; border-collapse: collapse' class="table">
   <thead>
@@ -75,7 +75,7 @@ Machine]([url](https://build.fhir.org/workflow-communications.html#12.10.2)) and
   </tr>
 </tbody></table>
 
-## Placer Initiated Cancellation
+### Placer Initiated Cancellation
 This is equivalent to the normal flow through the step that an intended performer has been selected. This step assumes that the service provider has not already begun service. 
 
 <table border="1" borderspacing="0" style='border: 1px solid black; border-collapse: collapse' class="table"><thead>
@@ -92,7 +92,7 @@ This is equivalent to the normal flow through the step that an intended performe
   </tr>
 </tbody></table>
 
-## Fulfiller Decline to Perform
+### Fulfiller Decline to Perform
 This flow is equivalent to the normal flow up to the point that a placer first notifies a potential fulfiller of a service request. In this flow, a fulfiller declines to perform the service, and may or may not specify a reason. 
 
 <table border="1" borderspacing="0" style='border: 1px solid black; border-collapse: collapse' class="table"><thead>
