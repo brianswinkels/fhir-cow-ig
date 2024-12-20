@@ -1,5 +1,3 @@
-# Fulfiller Requests for Additional Information
-
 Often, potential Fulfillers find that they need additional data from the Placer to process a request for care. They may do so by:
 
 * Directly querying for information that a Placer already has, and which the Fulfiller is authorized to access. These requests for additional information are generally handled synchronously. For example - "Check insurance coverage" or "check patient's medication list". 
@@ -20,7 +18,7 @@ Several features of the Subscriptions framework can be used to help with this. A
 .
 TODO - finish
 
-## Requesting Additional Information Asynchronously via a Letter Flow with Status Update
+### Requesting Additional Information Asynchronously via a Letter Flow with Status Update
 
 
-## Sending an Instruction Back to the Placer With Status Update
+### Sending an Instruction Back to the Placer With Status Update
