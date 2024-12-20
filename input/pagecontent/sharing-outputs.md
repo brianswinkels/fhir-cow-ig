@@ -1,4 +1,3 @@
-# Sharing Outputs 
 Many types of referrals and orders will involve the creation of some Output, either as a final product or as part of an intermediate workflow step.
 
 These could be result report, individual observations, a proposed plan of care, a consult note, etc. 
@@ -12,7 +11,7 @@ wherever that coordinating Task is hosted.
 Placers may choose to create their own local representation of that content, and additionally, to host their own copy of that content on their own FHIR server so that its information
 is surfacable to others invovled in a patient's care. Provenance FHIR resources may be used to indicate that the originator of the latest version of the Output is the owner. 
 
-## Preliminary Results, Addenda, and Updates with FHIR Servers
+### Preliminary Results, Addenda, and Updates with FHIR Servers
 
 In some contexts, a partial result may be shared from one system to another, or a later actor in the chain of care may decide to modify an earlier result. When this occurs, the actor
 may do so by updating their local representation of the earlier output, updating their FHIR resources for that content, and updating the Provenance to indicate that they are now the
@@ -22,4 +21,4 @@ For example - that update may be communicated with a Message that's been pre-def
 SubscriptionStatus notification that a copy of their document has been modified and should now be seen as the source of Truth. In that case, they could update their local copy as
 needed, with an appropriate provenance. 
 
-## Without FHIR Servers
+### Without FHIR Servers
