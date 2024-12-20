@@ -61,7 +61,7 @@ Machine]([url](https://build.fhir.org/workflow-communications.html#12.10.2)) and
   <tr>
     <td></td>
     <td>Preliminary</td>
-    <td>ServiceRequest:<br>- Status: active<br>- Intent: order<br><br>Task:<br>- Status: in-rogress<br>- BusinessStatus: Preliminary<br>- Code: fulfill<br>- Intent: order<br>- 1..* Output</td>
+    <td>ServiceRequest:<br>- Status: active<br>- Intent: order<br><br>Task:<br>- Status: in-progress<br>- BusinessStatus: Preliminary<br>- Code: fulfill<br>- Intent: order<br>- 1..* Output</td>
   </tr>
   <tr>
     <td>Complete</td>
