@@ -7,6 +7,7 @@ If the performer declines to perform the service (or fails to respond within a p
 
 TODO: Swap these out for the simple examples just for request with acceptance
 
+
 <div class="panel panel-default">
   <div class="panel-heading">
     <div class="panel-title">Request with Fulfiller Acceptance (Subscriptions - Task at Fulfiller) <button type="button" class="btn btn-default top-align-text" style="float: right;" data-target="#fig1" data-toggle="collapse">+</button></div>
