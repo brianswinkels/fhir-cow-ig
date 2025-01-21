@@ -1,0 +1,62 @@
+@startuml
+title Referrals - Task at Fulfiller Overview
+
+autonumber
+
+== 1. Create Request ==
+Placer -> Placer: Create Order, ServiceRequest
+
+note over Placer, Fulfiller: ServiceRequest representing that order now available for query on the Placer's FHIR server
+
+Placer -> Fulfiller: Task.Create
+
+note over Placer, Fulfiller: Task.basedOn is the ServiceRequest at the Placer. Can include additional supporting info in\n ServiceRequest.info or in the Task if Fulfiller-specific
+
+Placer -> Fulfiller: Placer Subscribes (or is subscribed) to that Task to get updates on status
+
+Fulfiller <->> Placer: Placer subscribes (or is subscribed) Fulfiller to ServiceRequest at Placer
+
+note over Placer, Fulfiller: Fulfiller can be notified of changes such as supporting info added\n Can optionally have other subscriptions, like for Patient Demographics info.\n\n**Note** that the subscription is just an identifier. The Subscription resource need not be surfacable.
+
+Fulfiller -> Placer: Query ServiceRequest.supportingInfo, ServiceRequest.reason, etc.
+
+Fulfiller <- Fulfiller: Update Task B.businessStatus 'requested' => 'accepted'
+
+Fulfiller -> Placer: SubscriptionStatus notification - Task updated
+
+note over Placer, Fulfiller: Could also have that the Fulfiller makes a Plan / RequestOrchestration with Task B.output
+
+note over Placer, Fulfiller: Then the Placer can update Task B to Accepted if they accept the Fulfiller's Proposal.
+
+Placer -> Placer: Update status of Tracking if needed
+
+group If Fulfiller will perform a more specific service
+    Fulfiller <- Fulfiller: Create ServiceRequest with ServiceRequest.basedOn pointing back to the Placer's ServiceRequest
+end
+
+== 2. Perform Service ==
+
+group If fulfiller creating an output document
+    Fulfiller <- Fulfiller: Performs Service, creates Output Document
+    Fulfiller <- Fulfiller: Updates Task B - Task.output == Outcome document
+end
+
+Fulfiller <- Fulfiller: Update Task.businessStatus
+
+Fulfiller -> Placer: SubscriptionStatus Notification for Task update
+
+Placer -> Placer: Update ServiceRequest.status == Completed
+
+note over Placer, Fulfiller: If Placer needs to review the outcome before confirming it's complete (like deciding whether to continue therapy), could have interim statuses.
+
+group Optionally - if Placer needs to be able to surface that outcome in future
+    Placer <-> Fulfiller: Read Output Document if not received within SubscriptionStatus Notification
+    Placer -> Placer: Save a copy. Meta.source == Fulfiller's document as source of truth.
+
+    note over Placer, Fulfiller: The DocumentReference, DiagnosticReport etc can also point back to the ServiceRequest on the Placer's system
+
+    group If Placer may later addend/ modify that document. Subscribe Fulfiller to their version.
+        Placer <->> Fulfiller: Placer subscribes Fulfiller to their copy for sake of future updates
+    end
+end
+@enduml
