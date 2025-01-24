@@ -1,15 +1,24 @@
-## Placer assignment
+(TO DO) There are several ways a fulfiller is determined. Here are some examples.  
 
-In the most simple flow, a provider creates a request and instructs a fulfiller that they should perform it. In this scenario, the placer is confident based on pre-coordinated buisiness and IT agreements that the performer won't decline the request.
+
+### Placer assigned
+
+In the most simple flow, the placer creates a request and indicates the specific fulfiller that should perform it. In this scenario, the placer is confident - based on pre-coordinated business and IT agreements, availability, etc. - that the performer won't decline the request.
 
 Based on the workflow of interest, the performer may or may not notify the requestor of an 'outcome' at a later time. 
 
 {% include img.html img="request-simplest.png" %}
 
 
+Examples: 
+[Scenario 1 - Placer-assigned Lab order tracking with Task](ExampleScenario-scenario1-lab-order.html)
+
+
 ### Example using Subscriptions with Task at Placer
+
+
 <figure>
-  {% include Subscriptions_No_Decline_Task_at_Placer.svg %}
+  {% include subscriptions-no-decline-task-at-placer.svg %}
 </figure>
 
 ### Example with Subscriptions with Task at Fulfiller

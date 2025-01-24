@@ -37,33 +37,33 @@ The below is a general overview of how Subscriptions could be used with the coor
 
 <!--
 <figure>
-  {% include Subscription_General_Example_Task_at_Placer.svg %} 
+  {% include subscriptions-general-example-task-at-placer.svg %} 
 </figure>
 -->
 
-{% include svg.html img="Subscription_General_Example_Task_at_Placer.svg" %}
+{% include svg.html img="subscriptions-general-example-task-at-placer.svg" %}
 
 ### Overview Example - Subscriptions with Task at Fulfiller
 
 <div>
-  {% include Subscriptions_General_Example_Task_at_Fulfiller.svg %} 
+  {% include subscriptions-general-example-task-at-fulfiller.svg %} 
 </div>
 
 ### Overview Example - Messaging + REST with Task at Placer
 The below is a general overview of how Messaging + REST  could be used with the coordinating Task hosted at the Placer. Many details are only alluded to in this draft. 
 
 <figure>
-  {% include Messaging_+_REST_General_Task_at_Placer.svg %} 
+  {% include messaging-rest-general-task-at-placer.svg %} 
 </figure>
 
 ### Overview Example - Messaging + REST with Task at Fulfiller
 
 <figure>
-  {% include Messaging_+_REST_General_Task_at_Fulfiller.svg %} 
+  {% include messaging-rest-general-task-at-fulfiller.svg %} 
 </figure>
 
 ### Overview Example - Messaging
 <figure>
-  {% include Pure-Messaging-with-placer-identifiers.svg %} 
+  {% include pure-messaging-with-placer-identifiers.svg %} 
 </figure>
 
