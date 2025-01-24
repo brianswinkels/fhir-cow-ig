@@ -110,13 +110,14 @@ While the below areas may be important when designing full end-to-end workflows 
 * **Patient Matching** - this guide provides minimal guidance on how the exchanging actors should confirm the identity of the patient in the exchange, as this may vary considerably by jurisdiction based on local identifiers and the availability of national IdPs. 
 * **Provider addressbooks** - identifying the set of providers, where they work, and their electronic endpoints for communication
 * **Service catalogs** - what tests, procedures, or other services a fulfiller can perform, and what information they would require to perform or assess their ability to perform a service (such as their order-specific questions).
-* **Scheduling** - confirming the time slot, location, and set of resources with whom a service will be performed
 * **Prior authorization** - with insurance agencies or other payers
+* **Scheduling** - confirming the time slot, location, and set of resources with whom a service will be performed
+
 * **Authentication, Authorization, and Auditing** - while this guide assumes the use of OAuth 2.0 protocols in examples, and includes discussion of access-control considerations that spec authors should consider when designing more specific exchanges, it makes no firm requirements on details of client-system authentication, user authentication, or server authentication. It also does not discuss details for how authorized scopes of interaction may be codified.
 * **Outcome / Result format and content of supporting resources** - in the overarching guidance, this IG only specifies that _some_ output may be generated from an order or referral, such as a result, a note, etc. This guide does not place any requirements on the form or content of these documents. For example - while examples in this IG may mention that a referral for imaging may conclude with a radiologist's result report, and this may be modelled in examples using DiagnosticReport and ImagingStudy resources, this guidance is not binding, and no further details are given for how the content of that DiagnosticReport may relate to particular observations, etc. This IG does provide guidance for how that output content, however it is constructed, may be tied back to an original service request to close the loop on an order or referral. 
 
 ### Definitions
-* Placer - the party that creates the request for service. This is also often referred to as the "orderer" or "reqeustor". We avoid use of the term Requestor to prevent confusion in terms of client-server interactions
+* Placer - the party that creates the request for service. This is also often referred to as the "orderer" or "requestor". We avoid use of the term Requestor to prevent confusion in terms of client-server interactions
 * Fulfiller - the actor or actors who may perform the service.
 
 ### How to Use This IG
