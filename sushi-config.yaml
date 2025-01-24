@@ -70,18 +70,19 @@ pages:
     title: Workflow Status overview
     generation: markdown
 
-  patterns-overview.md:
+  workflow-patterns.md:
     title: Workflow Patterns
     generation: markdown
-    ordering-workflows.md:
-      title: Ordering Workflows
+
+    order-initiation.md:
+      title: Order Initiation
       generation: markdown
 
-    fulfiller-selection.md:
-      title: Fulfiller Selection
+    fulfiller-determination.md:
+      title: Fulfiller Determination
       generation: markdown
       placer-assignment.md:
-        title: Simple Request
+        title: Placer assignment
         generation: markdown
       patient-mediated-requests.md:
         title: Patient-Mediated Requests
@@ -110,9 +111,9 @@ pages:
     sharing-outputs.md:
       title: Sharing Outputs from a Referral or Order
       generation: markdown
-      fulfiller-request-for-additional-info.md:
-        title: Fulfiller Request for Additional Info
-        generation: markdown
+    fulfiller-request-for-additional-info.md:
+      title: Fulfiller Request for Additional Info
+      generation: markdown
     
 #     documenting-workflows:
 #       title: Documenting Workflows
