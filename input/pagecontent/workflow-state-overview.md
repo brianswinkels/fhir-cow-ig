@@ -8,7 +8,7 @@ Machine]([url](https://build.fhir.org/workflow-communications.html#12.10.2)) and
 ### Common workflow states
 
 
-| Workflow State to Represent  | Request resource representation  | Task resource representation  | Event resources representation | Descriptions   |  |
+| Workflow State to Represent  | Request resource representation  | Task resource representation  | Event resources representation | Descriptions   |   |
 | ------------| -----| -------| ------| ----|---|
 | Request Placed (no designated performer)        | Request:<br>- Status: active<br>- Intent: order<br>- 0..* SupportingInfo   | Task:<br>- Status: requested<br>- Focus: [the ServiceRequest]<br>- Performer: [null]<br>- Code: fulfill<br>- Intent: order<br>- 0..* Input  | *Not set*  | This state can be a starting point for cases where the patient chooses the performer, cases when someone can *claim* the task, etc.       ||
 | Request placed and Performer Selected           | Request:<br>- Status: active<br>- Intent: order         | Task:<br>- Status: requested<br>- Performer: [specified]<br>- Code: fulfill<br>- Intent: order     | *Not set*  | This state can be a starting point for systems where the decision to authorize the request and determining the performer is done at the same time.  ||

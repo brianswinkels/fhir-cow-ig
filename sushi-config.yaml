@@ -67,38 +67,37 @@ pages:
     title: FHIR data exchange architectures
     generation: markdown
   workflow-state-overview.md:
-    title: Workflow State overview
+    title: Workflow Status overview
     generation: markdown
 
-  workflow-patterns.md:
+  patterns-overview.md:
     title: Workflow Patterns
     generation: markdown
-
-    order-initiation.md:
-      title: Order Initiation
+    ordering-workflows.md:
+      title: Ordering Workflows
       generation: markdown
 
-    fulfiller-determination.md:
-      title: Fulfiller Determination
+    fulfiller-selection.md:
+      title: Fulfiller Selection
       generation: markdown
-      # placer-assignment.md:
-      #   title: Placer assignment
-      #   generation: markdown
-      # patient-mediated-requests.md:
-      #   title: Patient-Mediated Requests
-      #   generation: markdown
-      # request-with-acceptance.md:
-      #   title: Request with Acceptance
-      #   generation: markdown
-      # request-with-multiple-potential-performers.md:
-      #   title: Request with Multiple Potential Performers
-      #   generation: markdown
-      # request-with-multiple-potential-performers-with-bidding.md:
-      #   title: Request with Multiple Potential Performers and Bidding
-      #   generation: markdown
-      # requests-to-central-coordinator.md:
-      #   title: Requests to a Central Coordinator
-      #   generation: markdown
+      placer-assignment.md:
+        title: Simple Request
+        generation: markdown
+      patient-mediated-requests.md:
+        title: Patient-Mediated Requests
+        generation: markdown
+      request-with-acceptance.md:
+        title: Request with Acceptance
+        generation: markdown
+      request-with-multiple-potential-performers.md:
+        title: Request with Multiple Potential Performers
+        generation: markdown
+      request-with-multiple-potential-performers-with-bidding.md:
+        title: Request with Multiple Potential Performers and Bidding
+        generation: markdown
+      requests-to-central-coordinator.md:
+        title: Requests to a Central Coordinator
+        generation: markdown
 
     cancelling-and-modifying-requests.md:
       title: Cancelling and modifying orders
@@ -109,11 +108,11 @@ pages:
       generation: markdown
 
     sharing-outputs.md:
-      title: Sharing outputs from an Order
+      title: Sharing Outputs from a Referral or Order
       generation: markdown
-    fulfiller-need-for-additional-info.md:
-      title: Fulfiller need for additional Info
-      generation: markdown
+      fulfiller-request-for-additional-info.md:
+        title: Fulfiller Request for Additional Info
+        generation: markdown
     
 #     documenting-workflows:
 #       title: Documenting Workflows
@@ -162,22 +161,20 @@ menu:
   Background: background.html
   Core Concepts: 
     Concepts: core-concepts.html
-    Workflow State overview: workflow-state-overview.html
+    Communicating the Workflow Status: workflow-state-overview.html
   Workflow Patterns: 
-    Overview of Workflow Patterns: workflow-patterns.html
-    # Fulfiller Selection:
-    #   Simple Request: simple-request.html
-    #   Request with Acceptance: request-with-acceptance.html
-    #   Request with Multiple Performers: request-with-multiple-potential-performers.html
-    #   Request with Multiple Performers, Bid: request-with-multiple-potential-performers-with-bidding.html
-    #   Requests to a Central Service: requests-to-central-coordinator.html
-    #   Patient-Mediated Requests: patient-mediated-requests.html
-    Order initiation: order-initiation.html
-    Order grouping: order-grouping.html
-    Fulfiller determination: fulfiller-determination.html
-    Cancelling and modifying requests: cancelling-and-modifying-Requests.html
-    Fulfiller requests for additional Info: fulfiller-request-for-additional-info.html
-    Sharing outputs of referrals and orders: sharing-outputs.html
+    Overview of Workflow Patterns: patterns-overview.html
+    Fulfiller Selection:
+      Simple Request: simple-request.html
+      Request with Acceptance: request-with-acceptance.html
+      Request with Multiple Performers: request-with-multiple-potential-performers.html
+      Request with Multiple Performers, Bid: request-with-multiple-potential-performers-with-bidding.html
+      Requests to a Central Service: requests-to-central-coordinator.html
+      Patient-Mediated Requests: patient-mediated-requests.html
+    Variations:
+      Cancelling and Modifying Requests: cancelling-and-modifying-Requests.html
+    Fulfiller Requests for Additional Info: fulfiller-request-for-additional-info.html
+    Sharing Outputs of Referrals and Orders: sharing-outputs.html
     
   Examples: examples.html
   Artifacts: artifacts.html
