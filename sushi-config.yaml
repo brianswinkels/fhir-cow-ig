@@ -67,7 +67,7 @@ pages:
     title: FHIR data exchange architectures
     generation: markdown
   workflow-state-overview.md:
-    title: Workflow Status overview
+    title: Workflow State overview
     generation: markdown
 
   workflow-patterns.md:
@@ -162,16 +162,16 @@ menu:
   Background: background.html
   Core Concepts: 
     Concepts: core-concepts.html
-    Communicating the Workflow Status: workflow-state-overview.html
+    Communicating the Workflow State: workflow-state-overview.html
   Workflow Patterns: 
     Overview of Workflow Patterns: patterns-overview.html
-    Fulfiller Selection:
-      Simple Request: simple-request.html
-      Request with Acceptance: request-with-acceptance.html
-      Request with Multiple Performers: request-with-multiple-potential-performers.html
-      Request with Multiple Performers, Bid: request-with-multiple-potential-performers-with-bidding.html
-      Requests to a Central Service: requests-to-central-coordinator.html
-      Patient-Mediated Requests: patient-mediated-requests.html
+    # Fulfiller Selection:
+    #   Simple Request: simple-request.html
+    #   Request with Acceptance: request-with-acceptance.html
+    #   Request with Multiple Performers: request-with-multiple-potential-performers.html
+    #   Request with Multiple Performers, Bid: request-with-multiple-potential-performers-with-bidding.html
+    #   Requests to a Central Service: requests-to-central-coordinator.html
+    #   Patient-Mediated Requests: patient-mediated-requests.html
     Variations:
       Cancelling and Modifying Requests: cancelling-and-modifying-Requests.html
     Fulfiller Requests for Additional Info: fulfiller-request-for-additional-info.html
