@@ -1,7 +1,7 @@
 Alias: $fhir-types = http://hl7.org/fhir/fhir-types
 
 Instance: example-laborder
-Title: "Placer-assigned Lab order tracking with Task"
+Title: "Scenario: Placer-assigned Lab order tracking with Task"
 InstanceOf: ExampleScenario
 Usage: #definition
 * text
