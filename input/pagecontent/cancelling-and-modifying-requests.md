@@ -5,8 +5,6 @@ This is equivalent to the normal flow through the step that an intended performe
 | Workflow State to Represent  | Request resource representation  | Task resource representation  | Event resources representation | Descriptions   |   |
 | ------------| -----| -------| ------| ----|---|
 |Placer Initiates Cancellation<br>(Before performance)|*Not set*|ServiceRequest<br>- Status: Revoked<br><br><br>1..* Task:<br>- Status: cancelled<br>- Code: fulfil<br>- Intent: order<br>- Focus: [the ServiceRequest]<br><br>OR - if a placer can't cancel on their own, BusinessStatus of CancelRequested? <br>Or a New Task with:<br><br><br>New Task:<br>- Status: Requested<br>- Code: Abort<br>- Input: [original Task]||
-  </tr>
-</tbody></table>
 {:.table-bordered .table-hover .table-sm}
 
 ### Placer cancellation of ServiceRequest
@@ -19,7 +17,7 @@ This is equivalent to the normal flow through the step that an intended performe
 ## Fulfiller initiated cancellation or modifications
 Some workflows allow a fulfiller to modify a request without prior approval from the proposal. For example:
 * A fulfiller may receive a general request to perform some service, and may then choose themselves which specific service should be performed.
-* A fulfiller may apply their own expertise to determine that an alternative service is more appropriate, and may initiate this on behalf of the original placer and under their authorityu.
+* A fulfiller may apply their own expertise to determine that an alternative service is more appropriate, and may initiate this on behalf of the original placer and under their authority.
 * A fulfiller may attempt to fulfill the requested service, but find that it can't be done due to the patient's condition or some other factor. In this case, they may complete a partial or alternative service. 
 
 (TO DO: Describe Placer initiated alteration before or after service started (request to stop))
