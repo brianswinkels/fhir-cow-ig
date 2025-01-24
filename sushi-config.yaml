@@ -81,24 +81,24 @@ pages:
     fulfiller-determination.md:
       title: Fulfiller Determination
       generation: markdown
-      placer-assignment.md:
-        title: Placer assignment
-        generation: markdown
-      patient-mediated-requests.md:
-        title: Patient-Mediated Requests
-        generation: markdown
-      request-with-acceptance.md:
-        title: Request with Acceptance
-        generation: markdown
-      request-with-multiple-potential-performers.md:
-        title: Request with Multiple Potential Performers
-        generation: markdown
-      request-with-multiple-potential-performers-with-bidding.md:
-        title: Request with Multiple Potential Performers and Bidding
-        generation: markdown
-      requests-to-central-coordinator.md:
-        title: Requests to a Central Coordinator
-        generation: markdown
+      # placer-assignment.md:
+      #   title: Placer assignment
+      #   generation: markdown
+      # patient-mediated-requests.md:
+      #   title: Patient-Mediated Requests
+      #   generation: markdown
+      # request-with-acceptance.md:
+      #   title: Request with Acceptance
+      #   generation: markdown
+      # request-with-multiple-potential-performers.md:
+      #   title: Request with Multiple Potential Performers
+      #   generation: markdown
+      # request-with-multiple-potential-performers-with-bidding.md:
+      #   title: Request with Multiple Potential Performers and Bidding
+      #   generation: markdown
+      # requests-to-central-coordinator.md:
+      #   title: Requests to a Central Coordinator
+      #   generation: markdown
 
     cancelling-and-modifying-requests.md:
       title: Cancelling and modifying orders
@@ -109,10 +109,10 @@ pages:
       generation: markdown
 
     sharing-outputs.md:
-      title: Sharing Outputs from a Referral or Order
+      title: Sharing outputs from an Order
       generation: markdown
-    fulfiller-request-for-additional-info.md:
-      title: Fulfiller Request for Additional Info
+    fulfiller-need-for-additional-info.md:
+      title: Fulfiller need for additional Info
       generation: markdown
     
 #     documenting-workflows:
