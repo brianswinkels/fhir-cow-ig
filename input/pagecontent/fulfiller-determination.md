@@ -23,29 +23,23 @@ Examples:
 [Scenario 1 - Placer-assigned Lab order tracking with Task](ExampleScenario-scenario1-lab-order.html)
 
 
-### Example using Subscriptions with Task at Placer
-
+#### Example using Subscriptions with Task at Placer
 
 <figure>
   {% include subscriptions-no-decline-task-at-placer.svg %}
 </figure>
 
-### Example with Subscriptions with Task at Fulfiller
+##### Example with Subscriptions with Task at Fulfiller
 
-
-### Example with Messaging + REST with Task at Placer
-
-
-### Example with Messaging + REST with Task at Fulfiller
-
+TODO
 
 ### Messaging (Relying on Identifiers)
 
+TODO
 
 <hr>
 
-
-## Patient-mediated requests
+### Patient-mediated requests
 Many orders and referrals take the form that a provider 'authorizes' that care with another provider may occur, but the patient (or their agent) then manages the coordination of that care. Once the patient has selected a performer, that performer may wish to query additional information (including the authorization) and to share information with the original requestor. 
 
 Examples:
@@ -58,18 +52,18 @@ Examples:
   {% include patient-selection.svg %}
 </figure>
 
+####
 
 <hr>
 
 
-## Request with acceptance
+### Request with acceptance
 
 When a requestor can't be certain of whether the fulfiller will be willing to perform a service (based on availability, insurance, etc.), they may ask the fulfiller to confirm that they accept the proposed service.
 
 If the performer declines to perform the service (or fails to respond within a pre-coordinated period), the requestor may choose to follow up with other potential performers. 
 
 {% include img.html img="request-accept.png" %}
-
 
 TODO: Swap these out for the simple examples just for request with acceptance
 
@@ -108,7 +102,7 @@ TODO: Swap these out for the simple examples just for request with acceptance
 <hr>
 
 
-## Request with multiple performers
+### Request with multiple performers
 
 Sometimes, a requestor may choose to immediately notify several potential performers that a service has been requested. If the requestor and the patient do not have a preference around who will perform the service, it may be that the first potential fulfiller to indicate availability may functionally 'claim' that service.
 
@@ -120,7 +114,7 @@ Sometimes, a requestor may choose to immediately notify several potential perfor
 <hr>
 
 
-## Request with multiple performers with bidding
+### Request with multiple performers with bidding
 
 Alternatively (and more often), a requestor may notify one or more potential fulfillers that they have a which must be performed. Those potential fulfillers may respond back with a 'bid' describing the service they could perform. The details of that 'bid' will vary by care-domain, but may indicate the performer's availability, the details of a more specific service they would perform, cost, information about the specific performer who may provide the service, etc.
 
@@ -132,7 +126,7 @@ The requestor and the patient may then review the information received from pote
 <hr>
 
 
-## Requests to a central coordinator
+### Requests to a central coordinator
 Many locales and care domains rely on a central coordinator to manage some aspects of an order, referral, or transfer workflow. In these flows, a requestor notifies a central management group that they have a service which must be performed, and that central management group may then triage, notify performers, assign providers, etc.
 
 Details may vary considerably by business agreements (such as whether the coordinator may _assign_ a request to a performer, or merely notify them) and architecture.
@@ -147,3 +141,4 @@ Later sections of this guide include details for a FHIR implementation to minimi
 {% include img.html img="request-central.png" %}
 
 <hr>
+
