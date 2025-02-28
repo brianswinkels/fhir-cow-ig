@@ -15,27 +15,26 @@ This is equivalent to the normal flow through the step that an intended performe
 *	ServiceRequest
     *	Status: Revoked
     *	1..* Task:
-**	Status: Cancelled 
-**	Code: Fulfill
-**	Intent: Order
-**	Focus: <the ServiceRequest>
+    *	Status: Cancelled 
+    *	Code: Fulfill
+    *	Intent: Order
+    *	Focus: <the ServiceRequest>
 *	New Task:
-**	Status: Requested
-**	Code: Abort
-** Input: original Task
-
+    *	Status: Requested
+    *	Code: Abort
+    * Input: original Task
 
 ### Fulfiller Decline to Perform:
 
 This flow is equivalent to the normal flow up to the point that a placer first notifies a potential fulfiller of a service request. In this flow, a fulfiller declines to perform the service, and may or may not specify a reason. 
 *	ServiceRequest:
-+	Status: active
-+	Intent: order
+    *	Status: active
+    *	Intent: order
 *	1 Task:
-+	Status: Rejected
-+	Performer: <specified>
-+	Code: Fulfill
-+	Intent: order
+    *	Status: Rejected
+    *	Performer: <specified>
+    *	Code: Fulfill
+    *	Intent: order
 
 ### Fulfiller Proposal for Particular or Alternative Service
 
@@ -43,21 +42,21 @@ This flow is equivalent to the normal flow through the step that a placer notifi
 
 This could be expected (such as a bid) or a proposed modification to the original request for which the fulfiller seegs approval. 
 *	ServiceRequest (Original):
-+	Status: active
-+	Intent: order
+    *	Status: active
+    *	Intent: order
 *	Task:
-+	Status: Rejected
-+	StatusReason: alternative proposal
-+	Performer: <specified>
-+	Code: Fulfill
-+	Focus: ServiceRequest (Original)
-+	Output (0..*)  
-++	Type: Alternative (exact valueset TBD)
-++	Value: ServiceRequest (proposed) – see below
+    *	Status: Rejected
+    * StatusReason: alternative proposal
+    *	Performer: <specified>
+    *	Code: Fulfill
+    *	Focus: ServiceRequest (Original)
+    *	Output (0..*)  
+        *	Type: Alternative (exact valueset TBD)
+        *	Value: ServiceRequest (proposed) – see below
 
 *	ServiceRequest (proposed):
-+	Status: active
-+	Intent: Proposal
+    *	Status: active
+    *	Intent: Proposal
 
 A placer may accept that proposal by:
 1. Optionally – creating a new ServiceRequest that matches the proposal, updating the status of their original ServiceRequest to Revoked, and indicating in ServiceRequest.replaces on the new request that it is a replacement. This ServiceRequest may include the proposal in ServiceRequest.basedOn
@@ -76,11 +75,11 @@ Such a scenario may also occur in the case that a procedure could not be complet
 ### Fulfiller Unable to Perform:
 In some scenarios, a fulfiller who initially accepted a request finds that they can no longer perform the requested service. Examples include when a specimen is dropped or if a bed didn’t open up. 
 *	ServiceRequest:
-+	Status: active
-+	Intent: order
+    *	Status: active
+    *	Intent: order
 *	1 Task:
-+ Status: Failed
-+	Performer: <specified>
-+	Code: Fulfill
-+	Intent: order
+    * Status: Failed
+    *	Performer: <specified>
+    *	Code: Fulfill
+    *	Intent: order
 
