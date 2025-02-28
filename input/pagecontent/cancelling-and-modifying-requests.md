@@ -1,45 +1,86 @@
-## Placer initiated cancellation
-(TO DO: Describe what happens here / what we are /are-not saying about what can be billed, whether the result exists, etc.)
-This is equivalent to the normal flow through the step that an intended performer has been selected. This step assumes that the service provider has not already begun service. 
+This section describes how an order may be cancelled or modified after creation.
 
-| Workflow State to Represent  | Request resource representation  | Task resource representation  | Event resources representation | Descriptions   |   |
-| ------------| -----| -------| ------| ----|---|
-|Placer Initiates Cancellation<br>(Before performance)|*Not set*|ServiceRequest<br>- Status: Revoked<br><br><br>1..* Task:<br>- Status: cancelled<br>- Code: fulfil<br>- Intent: order<br>- Focus: [the ServiceRequest]<br><br>OR - if a placer can't cancel on their own, BusinessStatus of CancelRequested? <br>Or a New Task with:<br><br><br>New Task:<br>- Status: Requested<br>- Code: Abort<br>- Input: [original Task]||
-{:.table-bordered .table-hover .table-sm}
+This guide requires that in circumstances where FHIR servers are prevalent and where resources are discoverable, the ServiceRequest that serves as the source-of-truth for the exchange SHALL be hosted on a FHIR server under the authority of the system from which it originated. Each party involved in an order, referral, or Transfer workflow may of course have their own internal representation as well. Actors SHOULD indicate if their own representation of a resource is not ‘primary’, however. 
 
-### Placer cancellation of ServiceRequest
+A ServiceRequest SHALL only ever be directly modified by the party which instantiated that resource. 
 
-### Placer initiated cancellation - before service started
-
-### Placer initiated cancellation after service started (request to stop)
+In such circumstances, the shared coordinating Task used by both the placer and fulfiller may be hosted on either the placer’s FHIR server or the fulfiller's FHIR server as the circumstances demand. Trading partners must decide as part of their pre-coordinated activity where the shared status-tracking Task will be hosted.
+ 
+As general guidance, this guide recommends that ServiceRequest.replaces be used when one ServiceRequest replaces another and use of ServiceRequest and Task resources with an intent of “Proposal” when one actor would like to suggest that the other authorize an action.
 
 
-## Fulfiller initiated cancellation or modifications
-Some workflows allow a fulfiller to modify a request without prior approval from the proposal. For example:
-* A fulfiller may receive a general request to perform some service, and may then choose themselves which specific service should be performed.
-* A fulfiller may apply their own expertise to determine that an alternative service is more appropriate, and may initiate this on behalf of the original placer and under their authority.
-* A fulfiller may attempt to fulfill the requested service, but find that it can't be done due to the patient's condition or some other factor. In this case, they may complete a partial or alternative service. 
+### Placer Initiated Cancellations.
 
-(TO DO: Describe Placer initiated alteration before or after service started (request to stop))
+This is equivalent to the normal flow through the step that an intended performer has been selected. In this flow, a placer sends a cancellation request to the fulfiller via a new Task resource with a status of “Requested” and a code of “Abort”. This satisfies a requirement of the FHIR Task State Machine that a task may not move from in-progress to cancelled. 
+*	ServiceRequest
+*	Status: Revoked
++	1..* Task: 
++	Status: Cancelled 
++	Code: Fulfill
++	Intent: Order
++	Focus: <the ServiceRequest>
+*	New Task:
++	Status: Requested
++	Code: Abort
++	Input: original Task
 
 
+### Fulfiller Decline to Perform:
 
-
-### Fulfiller decline to perform
 This flow is equivalent to the normal flow up to the point that a placer first notifies a potential fulfiller of a service request. In this flow, a fulfiller declines to perform the service, and may or may not specify a reason. 
+*	ServiceRequest:
++	Status: active
++	Intent: order
+*	1 Task:
++	Status: Rejected
++	Performer: <specified>
++	Code: Fulfill
++	Intent: order
 
-| Workflow State to Represent  | Request resource representation  | Task resource representation  | Event resources representation | Descriptions   |   |
-| ------------| -----| -------| ------| ----|---|
-| Fulfiller Declines Request | *Not set* | ServiceRequest:<br>- Status: active<br>- Intent: order<br><br>1 Task:<br>- Status: rejected<br>- Performer: [specified]<br>- Code: fulfill<br>- Intent: order |
-{:.table-bordered .table-hover .table-sm}
+### Fulfiller Proposal for Particular or Alternative Service
 
-### Fulfiller unable to perform
-?? Is this different?
+This flow is equivalent to the normal flow through the step that a placer notifies an intended performer of an available service request. The potential fulfiller in this flow then notifies the placer of a proposal for a specific or alternative service. 
 
-### Fulfiller modification request
-Fulfiller proposal for alternate service
+This could be expected (such as a bid) or a proposed modification to the original request for which the fulfiller seegs approval. 
+*	ServiceRequest (Original):
++	Status: active
++	Intent: order
+*	Task:
++	Status: Rejected
++	StatusReason: alternative proposal
++	Performer: <specified>
++	Code: Fulfill
++	Focus: ServiceRequest (Original)
++	Output (0..*)  
+++	Type: Alternative (exact valueset TBD)
+++	Value: ServiceRequest (proposed) – see below
 
-### Fulfiller modifications
-Fulfiller performing alternate / more specific service
+*	ServiceRequest (proposed):
++	Status: active
++	Intent: Proposal
 
+A placer may accept that proposal by:
+1. Optionally – creating a new ServiceRequest that matches the proposal, updating the status of their original ServiceRequest to Revoked, and indicating in ServiceRequest.replaces on the new request that it is a replacement. This ServiceRequest may include the proposal in ServiceRequest.basedOn
+2. Sending a Task back to the fulfiller with Task.Focus set to the replacement serviceRequest or proposal and an intent of Order.
+
+### Fulfiller Selection of a More Specific Service (Under Original Authority)
+
+**Example workflow**: a protocolling radiologist decides that a request for imaging should be performed as a specific procedure.
+
+In many cases, the more specific service may not be of interest to the placer. If the fulfiller needs to surface the ServiceRequest corresponding to the more specific service they will perform, they may create a new ServiceRequest with ServiceRequest.replaces referencing the Placer’s ServiceRequest. 
+
+Any output generated from this new service may still be linked in the Task.output of the shared status-tracking Task. Additionally, the output may be linked ‘back’ to the original ServiceRequest by following the chain of references.
+
+Such a scenario may also occur in the case that a procedure could not be completed as originally ordered. For example, if a request is created that a patient undergo a Nuclear Medicine rest/stress test, in some circumstances a patient may only be able to perform the rest portion. 
+
+### Fulfiller Unable to Perform:
+In some scenarios, a fulfiller who initially accepted a request finds that they can no longer perform the requested service. Examples include when a specimen is dropped or if a bed didn’t open up. 
+*	ServiceRequest:
++	Status: active
++	Intent: order
+*	1 Task:
++ Status: Failed
++	Performer: <specified>
++	Code: Fulfill
++	Intent: order
 
