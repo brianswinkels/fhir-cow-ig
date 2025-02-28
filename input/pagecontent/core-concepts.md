@@ -25,7 +25,7 @@ FHIR provides several mechanisms by which notifications may be sent between two 
 
 Implementations may choose to address these in different ways. 
 
-#### Brief Survey of Mechanisms for Pushing FHIR Content 
+### Brief Survey of Mechanisms for Pushing FHIR Content 
 This section is provided for context.
 * POST of a resource (RESTful FHIR Creates or Updates):
   + This mechanism may be used alongside others. It requires the availability of FHIR servers.
@@ -42,4 +42,3 @@ This section is provided for context.
   + Subscriptions includes two additional features that are potentially relevant for order, referral, and transfer workflows. 
 ++ The first is that a data-holder may make a "SubscriptionTopic" available to which authorized data requestors may then subscribe for updates. This is not required, as record holders may choose instead to create subscriptions administratively and out-of-band, but can be helpful if both actors support it. Dynamic subscriptions allow a Data requestor to  specify their own endpoint and select their events of interest and desired data format for messages from a menu of options chosen by the data holder. 
 ++ The second additional capability is a standard mechanism for a data holder to indicate to a potential recipient how they could query for specific additional information later. For example, if a patient's insurance may change between the time a referral is created and when a service will be performed, subscriptions provide a way for a referrer to inform a fulfiller of how they can obtain the patient's Coverage information later, closer to when it is needed.    
-  
