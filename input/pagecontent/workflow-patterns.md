@@ -1,6 +1,27 @@
-### Section overview
 This section describes several high-level patterns of interaction for order, referral, and transfer workflows, with a brief description of clinical scenarios in which they may apply.The set of interaction patterns described is not exhaustive: this IG uses them as a starting point to provide context in the subsequent discussions, and as a way to demonstrate the shared features of these exchanges.
 
+The areas identified in this Implementation Guide are:
+
+* **Order initiation**:  
+(TO DO) This addresses some aspects of how orders are created - some of those aspects are workflow-related and are identified here, while others are detailed in other specifications or are not currently in scope.
+* **Fulfiller determination**  
+(TO DO) This addresses the workflow implications of how a fulfiller is determined - by patient-mediated selection, or direct assignment by the placer...
+
+* **Cancelling and modifying orders**  
+(TO DO) 
+
+* **Order grouping**  
+(TO DO) 
+
+* **Sharing outputs from an order**  
+(TO DO) 
+
+* **Fulfiller need for additional information**  
+(TO DO) 
+
+<hr>
+<hr>
+<hr>
 ### The patterns described are:
 * A [simple order](./simple-request.html), in which a placer creates a request and they are confident a specific performer will fulfill it. 
 * A simple referral, in which a placer creates a request for a specific intended performer, but the selected performer may decline.
@@ -16,33 +37,33 @@ The below is a general overview of how Subscriptions could be used with the coor
 
 <!--
 <figure>
-  {% include Subscription_General_Example_Task_at_Placer.svg %} 
+  {% include subscriptions-general-example-task-at-placer.svg %} 
 </figure>
 -->
 
-{% include svg.html img="Subscription_General_Example_Task_at_Placer.svg" %}
+{% include svg.html img="subscriptions-general-example-task-at-placer.svg" %}
 
 ### Overview Example - Subscriptions with Task at Fulfiller
 
 <div>
-  {% include Subscriptions_General_Example_Task_at_Fulfiller.svg %} 
+  {% include subscriptions-general-example-task-at-fulfiller.svg %} 
 </div>
 
 ### Overview Example - Messaging + REST with Task at Placer
 The below is a general overview of how Messaging + REST  could be used with the coordinating Task hosted at the Placer. Many details are only alluded to in this draft. 
 
 <figure>
-  {% include Messaging_+_REST_General_Task_at_Placer.svg %} 
+  {% include messaging-rest-general-task-at-placer.svg %} 
 </figure>
 
 ### Overview Example - Messaging + REST with Task at Fulfiller
 
 <figure>
-  {% include Messaging_+_REST_General_Task_at_Fulfiller.svg %} 
+  {% include messaging-rest-general-task-at-fulfiller.svg %} 
 </figure>
 
 ### Overview Example - Messaging
 <figure>
-  {% include Pure-Messaging-with-placer-identifiers.svg %} 
+  {% include pure-messaging-with-placer-identifiers.svg %} 
 </figure>
 
