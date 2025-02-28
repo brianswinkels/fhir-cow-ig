@@ -111,6 +111,7 @@ pages:
     sharing-outputs.md:
       title: Sharing outputs from an Order
       generation: markdown
+      
     fulfiller-need-for-additional-info.md:
       title: Fulfiller need for additional Info
       generation: markdown
@@ -176,7 +177,7 @@ menu:
     Order grouping: order-grouping.html
     Fulfiller determination: fulfiller-determination.html
     Cancelling and modifying requests: cancelling-and-modifying-Requests.html
-    Fulfiller requests for additional Info: fulfiller-request-for-additional-info.html
+    Fulfiller requests for additional Info: fulfiller-need-for-additional-info.html
     Sharing outputs of referrals and orders: sharing-outputs.html
     
   Examples: examples.html
