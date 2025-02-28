@@ -1,5 +1,14 @@
-(TO DO) There are several ways a fulfiller is determined. Here are some examples.  
+There are several ways a fulfiller is determined.   
 
+A placer may initiate and authorize:
+* A simple order, in which a placer creates a request directs it to a specific performer who the placer is confident will make a best-effort attempt to fulfill the request. 
+* A simple referral, in which a placer creates a request for a specific intended performer, but the selected performer may decline to perform the requested service.
+* A request which a patient then uses to seek service at a place of their choosing.
+* A request which a placer directs to an expected performer, with the option that a patient may elect to receive the service elsewhere.
+* A request that may be broadcasted to several potential performers, in which any of them may claim the request.
+* A request sent to several potential performers, where the requestor and patient will then review proposals or bids sent back by the performers before selecting a definite performer.
+* A request to a central coordinator who will assign the request to a performer and notify the requestor of who will fulfill the request.
+* A request to a central coordinator who will assign the request to a performer and additionally mediate further communication between the requestor and performer. (TODO - decide if including. Grahame paper).
 
 ### Placer assigned
 
