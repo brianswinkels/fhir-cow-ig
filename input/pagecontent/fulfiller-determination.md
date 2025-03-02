@@ -84,27 +84,26 @@ When a requestor can't be certain of whether the fulfiller will be willing to pe
 
 <div class="panel panel-default">
   <div class="panel-heading">
-    <div class="panel-title">Subscriptions - Task at Fulfiller<button type="button" class="btn btn-default top-align-text" style="float: right;" data-target="#fig1" data-toggle="collapse">+</button></div>
-  </div>
-  <div id="fig1" class="panel-collapse collapse">
-    <div class="panel-body">
-        <figure>
-        {%include subscriptions-with-acceptance-task-at-fulfiller.svg%}
-        </figure>
-        <br clear="all"/>
-    </div>
-  </div>
-</div>
-
-
-<div class="panel panel-default">
-  <div class="panel-heading">
     <div class="panel-title">Subscriptions - Task at Placer<button type="button" class="btn btn-default" style="float: right;" data-target="#fig2" data-toggle="collapse">+</button></div>
   </div>
   <div id="fig2" class="panel-collapse collapse">
     <div class="panel-body">
         <figure>
         {%include subscriptions-with-acceptance-task-at-placer.svg%}
+        </figure>
+        <br clear="all"/>
+    </div>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <div class="panel-title">Subscriptions - Task at Fulfiller<button type="button" class="btn btn-default top-align-text" style="float: right;" data-target="#fig1" data-toggle="collapse">+</button></div>
+  </div>
+  <div id="fig1" class="panel-collapse collapse">
+    <div class="panel-body">
+        <figure>
+        {%include subscriptions-with-acceptance-task-at-fulfiller.svg%}
         </figure>
         <br clear="all"/>
     </div>
@@ -165,6 +164,21 @@ Sometimes, a requestor may choose to immediately notify several potential perfor
 
 {% include img.html img="request-claim.png" %}
 
+This can be accomplished by leveraging the Request-with-Acceptance flow, and keeping a separate task per potential fulfiller. For brevity, only one flow is described here. 
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <div class="panel-title">Subscriptions - Task at Placer<button type="button" class="btn btn-default" style="float: right;" data-target="#fig2" data-toggle="collapse">+</button></div>
+  </div>
+  <div id="fig2" class="panel-collapse collapse">
+    <div class="panel-body">
+        <figure>
+        {%include subscriptions-multiple-claim-task-at-placer.svg%}
+        </figure>
+        <br clear="all"/>
+    </div>
+  </div>
+</div>
 
 <hr>
 
@@ -177,6 +191,19 @@ The requestor and the patient may then review the information received from pote
 
 {% include img.html img="request-bid.png" %}
 
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <div class="panel-title">Subscriptions - Task at Placer<button type="button" class="btn btn-default" style="float: right;" data-target="#fig2" data-toggle="collapse">+</button></div>
+  </div>
+  <div id="fig2" class="panel-collapse collapse">
+    <div class="panel-body">
+        <figure>
+        {%include subscriptions-bid-task-at-placer.svg%}
+        </figure>
+        <br clear="all"/>
+    </div>
+  </div>
+</div>
 
 <hr>
 
@@ -194,6 +221,20 @@ Some common reasons for a central coordinator include:
 Later sections of this guide include details for a FHIR implementation to minimize the extent to which a requestor must be 'aware' of whether they are interacting with a central coordinator or a fulfiller. 
 
 {% include img.html img="request-central.png" %}
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <div class="panel-title">Subscriptions - Task at Placer<button type="button" class="btn btn-default" style="float: right;" data-target="#fig2" data-toggle="collapse">+</button></div>
+  </div>
+  <div id="fig2" class="panel-collapse collapse">
+    <div class="panel-body">
+        <figure>
+        {%include subscriptions-bid-task-at-placer.svg%}
+        </figure>
+        <br clear="all"/>
+    </div>
+  </div>
+</div>
 
 <hr>
 
