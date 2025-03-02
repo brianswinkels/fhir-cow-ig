@@ -42,7 +42,7 @@ Placer --> Placer: Update status of tracking if needed, such as ServiceRequest.s
 
 group If Fulfiller will perform a more specific service
     Fulfiller -[hidden]> Placer:
-    Fulfiller <- Fulfiller: Create ServiceRequest with ServiceRequest.basedOn referring to the Placer's ServiceRequest
+    Fulfiller <- Fulfiller: Create ServiceRequest with ServiceRequest.basedOn\nreferring to the Placer's ServiceRequest
 end
 
 == Perform Service ==
