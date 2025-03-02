@@ -25,17 +25,107 @@ Examples:
 
 #### Example using Subscriptions with Task at Placer
 
-<figure>
-  {% include subscriptions-no-decline-task-at-placer.svg %}
-</figure>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <div class="panel-title">Subscriptions - Task at Placer<button type="button" class="btn btn-default top-align-text" style="float: right;" data-target="#fig1" data-toggle="collapse">+</button></div>
+  </div>
+  <div id="fig1" class="panel-collapse collapse">
+    <div class="panel-body">
+        <figure>
+        {%include subscriptions-no-decline-task-at-placer.svg%}
+        </figure>
+        <br clear="all"/>
+    </div>
+  </div>
+</div>
 
 ##### Example with Subscriptions with Task at Fulfiller
 
-TODO
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <div class="panel-title">Subscriptions - Task at Fulfiller<button type="button" class="btn btn-default top-align-text" style="float: right;" data-target="#fig1" data-toggle="collapse">+</button></div>
+  </div>
+  <div id="fig1" class="panel-collapse collapse">
+    <div class="panel-body">
+        <figure>
+        {%include subscriptions-no-decline-task-at-placer.svg%}
+        </figure>
+        <br clear="all"/>
+    </div>
+  </div>
+</div>
 
-### Messaging (Relying on Identifiers)
+#### Example using Messaging (Relying on Identifiers)
 
-TODO
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <div class="panel-title">Messaging <button type="button" class="btn btn-default top-align-text" style="float: right;" data-target="#fig1" data-toggle="collapse">+</button></div>
+  </div>
+  <div id="fig1" class="panel-collapse collapse">
+    <div class="panel-body">
+        <figure>
+        {%include messaging-no-decline.svg%}
+        </figure>
+        <br clear="all"/>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<hr>
+
+
+### Request with acceptance
+
+When a requestor can't be certain of whether the fulfiller will be willing to perform a service (based on availability, insurance, etc.), they may ask the fulfiller to confirm that they accept the proposed service. If the performer declines to perform the service (or fails to respond within a pre-coordinated period), the requestor may choose to follow up with other potential performers. 
+
+{% include img.html img="request-accept.png" %}
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <div class="panel-title">Subscriptions - Task at Fulfiller<button type="button" class="btn btn-default top-align-text" style="float: right;" data-target="#fig1" data-toggle="collapse">+</button></div>
+  </div>
+  <div id="fig1" class="panel-collapse collapse">
+    <div class="panel-body">
+        <figure>
+        {%include subscriptions-with-acceptance-task-at-fulfiller.svg%}
+        </figure>
+        <br clear="all"/>
+    </div>
+  </div>
+</div>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <div class="panel-title">Subscriptions - Task at Placer<button type="button" class="btn btn-default" style="float: right;" data-target="#fig2" data-toggle="collapse">+</button></div>
+  </div>
+  <div id="fig2" class="panel-collapse collapse">
+    <div class="panel-body">
+        <figure>
+        {%include subscriptions-with-acceptance-task-at-placer.svg%}
+        </figure>
+        <br clear="all"/>
+    </div>
+  </div>
+</div>
+
+#### Example using Messaging (Relying on Identifiers)
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <div class="panel-title">Messaging <button type="button" class="btn btn-default top-align-text" style="float: right;" data-target="#fig1" data-toggle="collapse">+</button></div>
+  </div>
+  <div id="fig1" class="panel-collapse collapse">
+    <div class="panel-body">
+        <figure>
+        {%include messaging-with-acceptance.svg%}
+        </figure>
+        <br clear="all"/>
+    </div>
+  </div>
+</div>
 
 <hr>
 
@@ -48,56 +138,23 @@ Examples:
 * A provider may determine that a patient would benefit from receiving care in a long term care facility, and authorize that level of service. The patient and their family may consider several care facilities before deciding which they like.
 * A patient may discuss with their primary care provider that they would like to see a specialist, such as OB/MFM, an orthopedist, a psychologist, etc. The GP may authorize this service without having a specific performer in mind, and may rely on the patient to then find a specialist.  
 
-<figure>
-  {% include patient-selection.svg %}
-</figure>
+{% include img.html img="request-patient.png" %}
 
-####
-
-<hr>
-
-
-### Request with acceptance
-
-When a requestor can't be certain of whether the fulfiller will be willing to perform a service (based on availability, insurance, etc.), they may ask the fulfiller to confirm that they accept the proposed service.
-
-If the performer declines to perform the service (or fails to respond within a pre-coordinated period), the requestor may choose to follow up with other potential performers. 
-
-{% include img.html img="request-accept.png" %}
-
-TODO: Swap these out for the simple examples just for request with acceptance
-
+##### Example with Subscriptions with Task at Fulfiller
 
 <div class="panel panel-default">
   <div class="panel-heading">
-    <div class="panel-title">Request with Fulfiller Acceptance (Subscriptions - Task at Fulfiller) <button type="button" class="btn btn-default top-align-text" style="float: right;" data-target="#fig1" data-toggle="collapse">+</button></div>
+    <div class="panel-title">Subscriptions - Task at Fulfiller <button type="button" class="btn btn-default top-align-text" style="float: right;" data-target="#fig1" data-toggle="collapse">+</button></div>
   </div>
   <div id="fig1" class="panel-collapse collapse">
     <div class="panel-body">
         <figure>
-        {%include request-fulfiller-subscriptions-task-at-fulfiller.svg%}
+        {%include subscriptions-task-at-fulfiller-patient.svg%}
         </figure>
         <br clear="all"/>
     </div>
   </div>
 </div>
-
-
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <div class="panel-title">Request with Fulfiller Acceptance (Messaging - Task at Placer) <button type="button" class="btn btn-default" style="float: right;" data-target="#fig2" data-toggle="collapse">+</button></div>
-  </div>
-  <div id="fig2" class="panel-collapse collapse">
-    <div class="panel-body">
-        <figure>
-        {%include request-fulfiller-messaging-rest-task-at-placer.svg%}
-        </figure>
-        <br clear="all"/>
-    </div>
-  </div>
-</div>
-
-
 
 <hr>
 
@@ -107,8 +164,6 @@ TODO: Swap these out for the simple examples just for request with acceptance
 Sometimes, a requestor may choose to immediately notify several potential performers that a service has been requested. If the requestor and the patient do not have a preference around who will perform the service, it may be that the first potential fulfiller to indicate availability may functionally 'claim' that service.
 
 {% include img.html img="request-claim.png" %}
-
-
 
 
 <hr>
