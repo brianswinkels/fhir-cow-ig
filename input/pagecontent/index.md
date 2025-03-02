@@ -28,8 +28,8 @@ Many of the concepts in this guide are built on top of work by the Netherlands F
 #### Key Challenges Today:
 The below is a summary of key challenges in the referral, orders, and transfer space today, especially for cross-organization exchanges. The below is informational background and may not be comprehensive. Only some of the challenges described below are addressed as part of this implementation guide. 
 
-* **Endpoint discovery** - letting actors know to where an initial notification should be pushed, or from where additional information may be queried.
-* **Sharing supporting information** - it can be hard to supply all of the background with an order or referral today. For example - in HL7 v2, it's challenging to refer a patient for a surgical consult while communicating that it is based on a _particular_ set of imaging.
+* Endpoint discovery - letting actors know to where an initial notification should be pushed, or from where additional information may be queried.
+* Sharing supporting information - it can be hard to supply all of the background with an order or referral today. For example - in HL7 v2, it's challenging to refer a patient for a surgical consult while communicating that it is based on a _particular_ set of imaging.
 * **Requesting additional information** providers who receive a request for service may find that additional specific information is needed. That information may not laready exist in the patient's chart, and often that information of interest is not _always_ necessary to a given type of service. 
 * **Orchestration and tracking** - coordinating which actor has the baton, monitoring the overall status of a referral, managing the earlier steps, etc.
 * **Closing the loop** - sharing the outcome (and parital outcomes), such as a consult note, an imaging result, a proposed plan of care, etc. 
@@ -37,25 +37,25 @@ The below is a summary of key challenges in the referral, orders, and transfer s
 #### Aspects Included in this IG
 This IG provides guidance for how the following workflows could be accomplished in FHIR:
 
-1. **A placer notifying a (potential) fulfiller of a request** - including sharing supporting information necessary for the fulfiller to determine their ability to fulfill the request.
-2. **Performers requesting additional information** - this could be a RESTful query for specific information, a letter asking for information (requiring action by the Placer), or even an instruction to the placer (such as to order and coordinate a blood test for the patient prior to service by the fulfiller). 
-3. **A placer, patient, and potential performers coordinating who will ultimately fulfill a request**
-4. **Requestors sending updates to requests** - this could be a cancellation of the request, additional supporting information, a demographics change of the patient, etc.
-5. **Fulfillers sharing status updates**
-7. **Performers sharing outcomes of the reuqest for service** - where applicable, this could be a result, a consult note, etc. A fulfiller may also inform a placer that they could not complete the request for service. 
-8. ** Corrections ** - in which updates are made to an output after the request for service has been completed.
+* A placer notifying a (potential) fulfiller of a request - including sharing supporting information necessary for the fulfiller to determine their ability to fulfill the request.
+* Performers requesting additional information - this could be a RESTful query for specific information, a letter asking for information (requiring action by the Placer), or even an instruction to the placer (such as to order and coordinate a blood test for the patient prior to service by the fulfiller). 
+* A placer, patient, and potential performers coordinating who will ultimately fulfill a request
+* Requestors sending updates to requests - this could be a cancellation of the request, additional supporting information, a demographics change of the patient, etc.
+* Fulfillers sharing status updates
+* Performers sharing outcomes of the reuqest for service - where applicable, this could be a result, a consult note, etc. A fulfiller may also inform a placer that they could not complete the request for service. 
+* Corrections - in which updates are made to an output after the request for service has been completed.
 
 #### Aspects Not Covered in this IG:
 While specification authors and data exchange architects should consider the areas below when designing full end-to-end workflows for orders, referrals, and transfers, they are not discussed in depth in this IG. 
 
-* **Client Registration** - registering a client with an authorization server and identifying the set of data a client may access and the actions it may take (collectively "scopes") to carry out a set of workflows per a business agreement.
-* **Patient Matching** - this guide provides minimal guidance on how the exchanging actors should confirm the identity of the patient in the exchange, since this may vary considerably by jurisdiction based on local identifiers and the availability of national IdPs. 
-* **Provider addressbooks** - identifying the set of providers, where they work, and their electronic endpoints for communication.
-* **Service catalogs** - what tests, procedures, or other services a fulfiller can perform, and what information they would require to perform a service or to assess their ability to perform a service (such as their order-specific questions).
-* ** Decision Support and Prior authorization** - this IG provides only minimal guidance on workflow steps that occur before the creation of an actionable request for service. Many jurisdictions require that providers receive prior-authorization for a request for service from insurers or other payers.
-* **Scheduling** - confirming the time slot, location, provider, and materials with which a service will be performed
-* **Authentication, Authorization, and Auditing** - this guide assumes the use of OAuth 2.0 protocols in examples, and includes discussion of access-control considerations that spec authors should consider when designing more specific exchanges. However, this guide does not discuss the specific details of client-system authentication, user authentication, or server authentication. It also does not discuss in detail how authorized scopes of interaction may be codified.
-* **Outcome / Result format and content of supporting resources** - in the overarching guidance, this IG only specifies that _some_ output may be generated from an order or referral, such as a result, a note, etc. This guide does not place any requirements on the form or content of these documents. For example - while examples in this IG may mention that a referral for imaging may conclude with a radiologist's result report, and this may be modelled in examples using DiagnosticReport and ImagingStudy resources, this guidance is not binding, and no further details are given for how the content of that DiagnosticReport may relate to particular observations, etc. This IG does provide guidance for how such output content may be tied back to an original service request to close the loop on an order or referral. 
+* Client Registration - registering a client with an authorization server and identifying the set of data a client may access and the actions it may take (collectively "scopes") to carry out a set of workflows per a business agreement.
+* Patient Matching - this guide provides minimal guidance on how the exchanging actors should confirm the identity of the patient in the exchange, since this may vary considerably by jurisdiction based on local identifiers and the availability of national IdPs. 
+* Provider addressbooks - identifying the set of providers, where they work, and their electronic endpoints for communication.
+* Service catalogs - what tests, procedures, or other services a fulfiller can perform, and what information they would require to perform a service or to assess their ability to perform a service (such as their order-specific questions).
+* Decision Support and Prior authorization - this IG provides only minimal guidance on workflow steps that occur before the creation of an actionable request for service. Many jurisdictions require that providers receive prior-authorization for a request for service from insurers or other payers.
+* Scheduling - confirming the time slot, location, provider, and materials with which a service will be performed
+* Authentication, Authorization, and Auditing - this guide assumes the use of OAuth 2.0 protocols in examples, and includes discussion of access-control considerations that spec authors should consider when designing more specific exchanges. However, this guide does not discuss the specific details of client-system authentication, user authentication, or server authentication. It also does not discuss in detail how authorized scopes of interaction may be codified.
+* Outcome / Result format and content of supporting resources - in the overarching guidance, this IG only specifies that _some_ output may be generated from an order or referral, such as a result, a note, etc. This guide does not place any requirements on the form or content of these documents. For example - while examples in this IG may mention that a referral for imaging may conclude with a radiologist's result report, and this may be modelled in examples using DiagnosticReport and ImagingStudy resources, this guidance is not binding, and no further details are given for how the content of that DiagnosticReport may relate to particular observations, etc. This IG does provide guidance for how such output content may be tied back to an original service request to close the loop on an order or referral. 
 
 ### Dependencies
 This IG Contains the following dependencies on other IGs.
