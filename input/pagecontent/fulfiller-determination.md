@@ -1,7 +1,7 @@
 There are several ways a fulfiller is determined.   
 
 A placer may initiate and authorize:
-* A simple order, in which a placer creates a request directs it to a specific performer who the placer is confident will make a best-effort attempt to fulfill the request. 
+* A simple order, in which a placer creates a request and directs it to a specific performer who the placer is confident will make a best-effort attempt to fulfill the request. 
 * A simple referral, in which a placer creates a request for a specific intended performer, but the selected performer may decline to perform the requested service.
 * A request which a patient then uses to seek service at a place of their choosing.
 * A request which a placer directs to an expected performer, with the option that a patient may elect to receive the service elsewhere.
