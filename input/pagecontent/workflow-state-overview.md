@@ -6,7 +6,7 @@ Not all states will apply to all workflows or use-cases, and many implementation
 ### Common workflow states
 
 
-| Workflow State to Represent  | Request resource representation  | Task resource representation  | Event resources representation | Descriptions |
+| <div style="width:300px">Workflow State to Represent</div> |<div style="width:300px"> Request resource representation </div> | <div style="width:300px"> Task resource representation </div> | <div style="width:300px"> Event resources representation </div>| <div style="width:300px"> Descriptions </div>|
 | ------------ | ------------| ------------| ------------| ------------| 
 | Request Placed (no designated performer)        | Request:<br>- Status: active<br>- Intent: order<br>- 0..* SupportingInfo   | Task:<br>- Status: requested<br>- Focus: [the ServiceRequest]<br>- Performer: [null]<br>- Code: fulfill<br>- Intent: order<br>- 0..* Input  | *Not set*  | This state can be a starting point for cases where the patient chooses the performer, cases when someone can *claim* the task, etc.       |
 | Request placed and performer selected           | Request:<br>- Status: active<br>- Intent: order         | Task:<br>- Status: requested<br>- Performer: [specified]<br>- Code: fulfill<br>- Intent: order     | *Not set*  | This state can be a starting point for systems where the decision to authorize the request and determining the performer is done at the same time.  |
