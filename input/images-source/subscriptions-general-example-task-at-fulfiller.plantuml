@@ -3,7 +3,7 @@ title Task at Fulfiller Overview
 
 autonumber
 
-== 0. Pre-Coordination ==
+== Pre-Coordination ==
 
 Placer --> Placer: Register Fulfiller as a client
 
@@ -21,7 +21,7 @@ Placer --> Placer: Create an administrative subscription for the Fulfiller on Se
 note over Placer, Fulfiller: Fulfiller can be notified if supporting info is added\n Other subscriptions, like for Patient Demographics info, are also possible.\n\n**Note** that the subscription is just an identifier and not be a surfacable resource.
 
 
-== 1. Create Request ==
+== Create Request ==
 Placer -> Placer: Create Order, ServiceRequest
 
 note over Placer, Fulfiller: ServiceRequest representing that order now available for query on the Placer's FHIR server
@@ -45,7 +45,7 @@ group If Fulfiller will perform a more specific service
     Fulfiller <- Fulfiller: Create ServiceRequest with ServiceRequest.basedOn referring to the Placer's ServiceRequest
 end
 
-== 2. Perform Service ==
+== Perform Service ==
 
 group If fulfiller creating an output document
     Fulfiller -[hidden]> Placer:
