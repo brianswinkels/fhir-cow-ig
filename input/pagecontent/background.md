@@ -6,7 +6,7 @@ Our goal in creating basic guidance, even if not directly implementable, is to h
 2. Highlighting abstractions that allow development for one domain to apply to others
 3. Creating shared nomenclature to help spec authors define and share goals quickly. 
 
-IGs developed for particular care domains (such as social care referrals, durable medical equipment, nursing home placement, etc.) or for particular jurisdictions may assert conformance to this IG if they leverage the same exchange patterns.
+IGs developed for particular care domains (such as social care referrals, durable medical equipment, nursing home placement, imaging, etc.) or for particular jurisdictions may assert conformance to this IG if they leverage a compatible representation of the status of a request for service and compatible exchange mechanismss.
 
 ### Referrals, Orders, and Transfers
 Modern healthcare delivery includes a variety of stakeholders, settings, specialties, interventions, and equipment. This often leads to overloading of terms, and lack of understanding of commonalities among healthcare processes. One example of that is how the term `referral` is used.
@@ -82,3 +82,14 @@ One attempt to describe the different types of processes that may be called `ref
 
 All of these workflows assume that some healthcare provider, while working with a patient, decides that some action should be taken by another provider or healthcare organization. The receiving party may or may not be allowed, based on the business agreements, to reject or to modify the request for service, and the initiating party may or may not expect to receive some information back during or after the service.
 
+### Key Differences in Requirements Across Jurisdictions Today:
+
+In reviewing other locale and care-domain specific work, this IG's authors have noted two factors which frequently motivate the creation of new exchange specifications for orders and referrals. These are:
+1. Considerations for minimizing data access
+2. Accomodating interactions with systems that mayt not yet support robust (and highly available) FHIR servers
+
+** Groups prioritizing (1) ** have tended to focus on RESTful exchange and on minimizing the set of data which is first transmitted between the creator of a request for service and the potential performers of that service. This occasionally extends to the point of including no supporting information with the initial notification, and instead requiring that a potential fulfiller query for any information necessary to process the request. Often, these groups also provide guidance for controlling what a potential fullfiller may query within a data-category: this could incldue limiting a non-healthcare service provider to accessing only a subset of ServiceRequests, such as those related to transport assistance, or preventing service providers from querying about the volume of requests that were sent to their competitor, by allowing them to access service request data only for those patients for whom they have received a referral.
+
+** Groups prioritizing (2) ** often focus on FHIR Messaging, which leads to considerations similar to those in HL7 v2 around broadcast interfaces and whether to include all information a fulfiller _might_ need to process a request in the notification.
+
+This guide aims to support both groups. This guide can be seen as providing a roadmap for those prioritizing (2) to move towards RESTful exchanges as their broader exchange ecosystems develop. This also reduces implementation burden for vendors (and therefore, lock-in and silos) by providing a data model which may be represented using either paradigm. Groups prioritizing (1) should be mindful that limiting access can require pre-coordination which leads to implementation complexity, and that, often, a specialist receiving a referral is in the best position to know what data is relevant. This guide provides a brief description in the Core Concepts page for how placers may optionally limit a service provider to accessing data only to those patients for whom they have received a referral. 
