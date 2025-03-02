@@ -63,17 +63,12 @@ pages:
   core-concepts.md:
     title: Core Concepts
     generation: markdown
-  fhir-exchange-architectures.md:
-    title: FHIR data exchange architectures
-    generation: markdown
   workflow-state-overview.md:
     title: Workflow State overview
     generation: markdown
-
   workflow-patterns.md:
     title: Workflow Patterns
     generation: markdown
-
     order-initiation.md:
       title: Order Initiation
       generation: markdown
