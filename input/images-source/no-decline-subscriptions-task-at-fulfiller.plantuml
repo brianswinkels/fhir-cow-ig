@@ -1,0 +1,38 @@
+@startuml
+'skinparam svgDimensionStyle false
+autonumber
+
+== Create Request ==
+
+note over Placer,Fulfiller
+Assume endpoints, client registration, business rules, etc. 
+are communicated beforehand and that subscriptions already initiated
+end note
+
+||45||
+
+Placer -> Placer : Create local representation, ServiceRequest
+
+Placer -> Fulfiller : POST Task to Fulfiller with ServiceRequest in Task.basedOn
+
+Fulfiller <-- Fulfiller: Create Local Representation
+
+||45||
+
+note over Placer,Fulfiller
+Based on business agreements, no confirmation needed of the HTTP status code. 
+The Placer may assume the Fulfiller accepts the request. 
+end note
+
+||45||
+
+== If Generating Output == 
+
+Fulfiller <- Fulfiller : Create Output Document (of some\nform, if needed) and host on FHIR server
+
+Fulfiller <- Fulfiller: Update Task.Output
+
+Placer <- Fulfiller: send SubscriptionStatusNotification for Task update
+
+Placer --> Placer : Create local-representation as needed
+@enduml
