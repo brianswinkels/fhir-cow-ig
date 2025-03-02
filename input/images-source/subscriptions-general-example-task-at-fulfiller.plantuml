@@ -1,5 +1,5 @@
 @startuml
-title Referrals - Task at Fulfiller Overview
+title Task at Fulfiller Overview
 
 autonumber
 
@@ -7,11 +7,11 @@ autonumber
 
 Placer --> Placer: Register Fulfiller as a client
 
-Fulfiller --> Fulfiller: Register Placer as a Client
+Fulfiller <-- Fulfiller: Register Placer as a Client
 
 Placer --> Fulfiller: Inform Fulfiller of their channel on which to receive SubscpriptionStauts-notification bundles
 
-Fulfiller --> Fulfiller: Create an administrative subscription for the Placer on Tasks which the Placer creates 
+Fulfiller <-- Fulfiller: Create an administrative subscription for the Placer on Tasks which the Placer creates 
 
 note over Placer, Fulfiller: TODO: need to think through more how to do the below if the Task is at the Fulfiller
 Fulfiller --> Placer: Inform Placer of their own channel
@@ -40,13 +40,15 @@ note over Placer, Fulfiller: Could also have that the Fulfiller makes a Plan, Re
 
 Placer --> Placer: Update status of tracking if needed, such as ServiceRequest.status. 
 
-group over Placer, Fulfiller: If Fulfiller will perform a more specific service
+group If Fulfiller will perform a more specific service
+    Fulfiller -[hidden]> Placer:
     Fulfiller <- Fulfiller: Create ServiceRequest with ServiceRequest.basedOn referring to the Placer's ServiceRequest
 end
 
 == 2. Perform Service ==
 
-group over Placer, Fulfiller: If fulfiller creating an output document
+group If fulfiller creating an output document
+    Fulfiller -[hidden]> Placer:
     Fulfiller <- Fulfiller: Performs Service, creates Output
     Fulfiller <- Fulfiller: Updates Task.output == Output
 end
@@ -55,15 +57,15 @@ Fulfiller <- Fulfiller: Update Task.businessStatus
 
 Fulfiller -> Placer: SubscriptionStatus Notification for Task update
 
-group over Placer, Fulfiller: Optionally, if placer needs to be able to review the output
+group Optionally, if placer needs to be able to review the output
+    Fulfiller -[hidden]> Placer:
     Placer -> Fulfiller: Reads output via Task.output
 end
 
 Placer -> Placer: Update ServiceRequest.status == Completed
 
-note over Placer, Fulfiller: If Placer needs to review the outcome before confirming it's complete (like deciding whether to continue therapy), could have interim statuses.
-
-group Optionally - if Placer needs to be able to surface that outcome in future
+group Optionally - if Placer needs to surface that outcome in future
+    Fulfiller -[hidden]> Placer:
     Placer <-> Fulfiller: Read Output Document if not received within SubscriptionStatus Notification
     Placer -> Placer: Save a copy with Provenance indicating Fulfiller's document is source of truth. Note DiagnosticReport, etc. will also reference Placer's ServiceRequest
    
