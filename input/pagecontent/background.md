@@ -118,7 +118,7 @@ This section is provided for context and provides a brief overview of mechanisms
 * These may operate similar to the RESTful Create and Update described above, but provide a mechanism for a client to submit several transactions as a set, which can reduce network traffic. This guide does not explore this option in detail.
 
 **FHIR Messaging:**
-* A bundle may be sent between actors based on some Event. That bundle contains a MessageHeader resource and other resources of interest.
+* A bundle is sent between actors based on some Event. That bundle contains a MessageHeader resource and other resources of interest.
 * There is no requirement with FHIR Messaging that the resources within a Message Bundle have an independent and persistent existence, or that they be surfaceable in response to a FHIR query.
 * Messaging provides similar functionality to event-driven HL7 v2 exchanges, where the content of the messages to be exchanged are now resources rather than PID segments, ORC segments, etc. This mechanism therefore has similar considerations, like that the sender and receiver must make tight agreements about events of interest, message content, and identifiers. Senders should err on the side of sending content at a given event trigger that they expect the recipient *may* want, since there's no guarantee that a recipient can request or query for additional content later.
 **FHIR Subscriptions:**
