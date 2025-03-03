@@ -45,7 +45,7 @@ Examples:
   <div class="panel-heading">
     <div class="panel-title">Subscriptions - Task at Fulfiller<button type="button" class="btn btn-default top-align-text" style="float: right;" data-target="#fig2" data-toggle="collapse">+</button></div>
   </div>
-  <div id="fig1" class="panel-collapse collapse">
+  <div id="fig2" class="panel-collapse collapse">
     <div class="panel-body">
         <figure>
         {%include subscriptions-no-decline-task-at-placer.svg%}
@@ -61,7 +61,7 @@ Examples:
   <div class="panel-heading">
     <div class="panel-title">Messaging <button type="button" class="btn btn-default top-align-text" style="float: right;" data-target="#fig3" data-toggle="collapse">+</button></div>
   </div>
-  <div id="fig1" class="panel-collapse collapse">
+  <div id="fig3" class="panel-collapse collapse">
     <div class="panel-body">
         <figure>
         {%include messaging-no-decline.svg%}
@@ -86,7 +86,7 @@ When a requestor can't be certain of whether the fulfiller will be willing to pe
   <div class="panel-heading">
     <div class="panel-title">Subscriptions - Task at Placer<button type="button" class="btn btn-default" style="float: right;" data-target="#fig4" data-toggle="collapse">+</button></div>
   </div>
-  <div id="fig2" class="panel-collapse collapse">
+  <div id="fig4" class="panel-collapse collapse">
     <div class="panel-body">
         <figure>
         {%include subscriptions-with-acceptance-task-at-placer.svg%}
@@ -100,7 +100,7 @@ When a requestor can't be certain of whether the fulfiller will be willing to pe
   <div class="panel-heading">
     <div class="panel-title">Subscriptions - Task at Fulfiller<button type="button" class="btn btn-default top-align-text" style="float: right;" data-target="#fig5" data-toggle="collapse">+</button></div>
   </div>
-  <div id="fig1" class="panel-collapse collapse">
+  <div id="fig5" class="panel-collapse collapse">
     <div class="panel-body">
         <figure>
         {%include subscriptions-with-acceptance-task-at-fulfiller.svg%}
@@ -116,7 +116,7 @@ When a requestor can't be certain of whether the fulfiller will be willing to pe
   <div class="panel-heading">
     <div class="panel-title">Messaging <button type="button" class="btn btn-default top-align-text" style="float: right;" data-target="#fig6" data-toggle="collapse">+</button></div>
   </div>
-  <div id="fig1" class="panel-collapse collapse">
+  <div id="fig6" class="panel-collapse collapse">
     <div class="panel-body">
         <figure>
         {%include messaging-with-acceptance.svg%}
@@ -145,7 +145,7 @@ Examples:
   <div class="panel-heading">
     <div class="panel-title">Subscriptions - Task at Fulfiller <button type="button" class="btn btn-default top-align-text" style="float: right;" data-target="#fig7" data-toggle="collapse">+</button></div>
   </div>
-  <div id="fig1" class="panel-collapse collapse">
+  <div id="fig7" class="panel-collapse collapse">
     <div class="panel-body">
         <figure>
         {%include subscriptions-task-at-fulfiller-patient.svg%}
@@ -170,7 +170,7 @@ This can be accomplished by leveraging the Request-with-Acceptance flow, and kee
   <div class="panel-heading">
     <div class="panel-title">Subscriptions - Task at Placer<button type="button" class="btn btn-default" style="float: right;" data-target="#fig8" data-toggle="collapse">+</button></div>
   </div>
-  <div id="fig2" class="panel-collapse collapse">
+  <div id="fig8" class="panel-collapse collapse">
     <div class="panel-body">
         <figure>
         {%include subscriptions-multiple-claim-task-at-placer.svg%}
@@ -195,7 +195,7 @@ The requestor and the patient may then review the information received from pote
   <div class="panel-heading">
     <div class="panel-title">Subscriptions - Task at Placer<button type="button" class="btn btn-default" style="float: right;" data-target="#fig9" data-toggle="collapse">+</button></div>
   </div>
-  <div id="fig2" class="panel-collapse collapse">
+  <div id="fig9" class="panel-collapse collapse">
     <div class="panel-body">
         <figure>
         {%include subscriptions-bid-task-at-placer.svg%}
@@ -226,7 +226,7 @@ Later sections of this guide include details for a FHIR implementation to minimi
   <div class="panel-heading">
     <div class="panel-title">Subscriptions - Task at Placer<button type="button" class="btn btn-default" style="float: right;" data-target="#fig10" data-toggle="collapse">+</button></div>
   </div>
-  <div id="fig2" class="panel-collapse collapse">
+  <div id="fig10" class="panel-collapse collapse">
     <div class="panel-body">
         <figure>
         {%include subscriptions-bid-task-at-placer.svg%}
