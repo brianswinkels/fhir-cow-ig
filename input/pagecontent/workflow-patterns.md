@@ -8,7 +8,7 @@ The areas identified in this Implementation Guide are:
 * **Fulfiller determination**  
 After a request has been created, this section describes how a fulfiller for that service is selected. This could be direct assignment by a placer, assignment by a central triage or coordination office, or patient-selection.
 
-* ** Requests by a fulfiller for additional information**  
+* **Requests by a fulfiller for additional information**  
 This section also describes how potential fulfillers may request additional information about the requested service, which may be important to their determining if they will accept the request for service. 
 
 * **Cancelling and modifying orders**  
