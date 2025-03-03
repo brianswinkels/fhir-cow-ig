@@ -43,7 +43,7 @@ Examples:
 
 <div class="panel panel-default">
   <div class="panel-heading">
-    <div class="panel-title">Subscriptions - Task at Fulfiller<button type="button" class="btn btn-default top-align-text" style="float: right;" data-target="#fig1" data-toggle="collapse">+</button></div>
+    <div class="panel-title">Subscriptions - Task at Fulfiller<button type="button" class="btn btn-default top-align-text" style="float: right;" data-target="#fig2" data-toggle="collapse">+</button></div>
   </div>
   <div id="fig1" class="panel-collapse collapse">
     <div class="panel-body">
@@ -59,7 +59,7 @@ Examples:
 
 <div class="panel panel-default">
   <div class="panel-heading">
-    <div class="panel-title">Messaging <button type="button" class="btn btn-default top-align-text" style="float: right;" data-target="#fig1" data-toggle="collapse">+</button></div>
+    <div class="panel-title">Messaging <button type="button" class="btn btn-default top-align-text" style="float: right;" data-target="#fig3" data-toggle="collapse">+</button></div>
   </div>
   <div id="fig1" class="panel-collapse collapse">
     <div class="panel-body">
@@ -84,7 +84,7 @@ When a requestor can't be certain of whether the fulfiller will be willing to pe
 
 <div class="panel panel-default">
   <div class="panel-heading">
-    <div class="panel-title">Subscriptions - Task at Placer<button type="button" class="btn btn-default" style="float: right;" data-target="#fig2" data-toggle="collapse">+</button></div>
+    <div class="panel-title">Subscriptions - Task at Placer<button type="button" class="btn btn-default" style="float: right;" data-target="#fig4" data-toggle="collapse">+</button></div>
   </div>
   <div id="fig2" class="panel-collapse collapse">
     <div class="panel-body">
@@ -98,7 +98,7 @@ When a requestor can't be certain of whether the fulfiller will be willing to pe
 
 <div class="panel panel-default">
   <div class="panel-heading">
-    <div class="panel-title">Subscriptions - Task at Fulfiller<button type="button" class="btn btn-default top-align-text" style="float: right;" data-target="#fig1" data-toggle="collapse">+</button></div>
+    <div class="panel-title">Subscriptions - Task at Fulfiller<button type="button" class="btn btn-default top-align-text" style="float: right;" data-target="#fig5" data-toggle="collapse">+</button></div>
   </div>
   <div id="fig1" class="panel-collapse collapse">
     <div class="panel-body">
@@ -114,7 +114,7 @@ When a requestor can't be certain of whether the fulfiller will be willing to pe
 
 <div class="panel panel-default">
   <div class="panel-heading">
-    <div class="panel-title">Messaging <button type="button" class="btn btn-default top-align-text" style="float: right;" data-target="#fig1" data-toggle="collapse">+</button></div>
+    <div class="panel-title">Messaging <button type="button" class="btn btn-default top-align-text" style="float: right;" data-target="#fig6" data-toggle="collapse">+</button></div>
   </div>
   <div id="fig1" class="panel-collapse collapse">
     <div class="panel-body">
@@ -143,7 +143,7 @@ Examples:
 
 <div class="panel panel-default">
   <div class="panel-heading">
-    <div class="panel-title">Subscriptions - Task at Fulfiller <button type="button" class="btn btn-default top-align-text" style="float: right;" data-target="#fig1" data-toggle="collapse">+</button></div>
+    <div class="panel-title">Subscriptions - Task at Fulfiller <button type="button" class="btn btn-default top-align-text" style="float: right;" data-target="#fig7" data-toggle="collapse">+</button></div>
   </div>
   <div id="fig1" class="panel-collapse collapse">
     <div class="panel-body">
@@ -168,7 +168,7 @@ This can be accomplished by leveraging the Request-with-Acceptance flow, and kee
 
 <div class="panel panel-default">
   <div class="panel-heading">
-    <div class="panel-title">Subscriptions - Task at Placer<button type="button" class="btn btn-default" style="float: right;" data-target="#fig2" data-toggle="collapse">+</button></div>
+    <div class="panel-title">Subscriptions - Task at Placer<button type="button" class="btn btn-default" style="float: right;" data-target="#fig8" data-toggle="collapse">+</button></div>
   </div>
   <div id="fig2" class="panel-collapse collapse">
     <div class="panel-body">
@@ -193,7 +193,7 @@ The requestor and the patient may then review the information received from pote
 
 <div class="panel panel-default">
   <div class="panel-heading">
-    <div class="panel-title">Subscriptions - Task at Placer<button type="button" class="btn btn-default" style="float: right;" data-target="#fig2" data-toggle="collapse">+</button></div>
+    <div class="panel-title">Subscriptions - Task at Placer<button type="button" class="btn btn-default" style="float: right;" data-target="#fig9" data-toggle="collapse">+</button></div>
   </div>
   <div id="fig2" class="panel-collapse collapse">
     <div class="panel-body">
@@ -224,7 +224,7 @@ Later sections of this guide include details for a FHIR implementation to minimi
 
 <div class="panel panel-default">
   <div class="panel-heading">
-    <div class="panel-title">Subscriptions - Task at Placer<button type="button" class="btn btn-default" style="float: right;" data-target="#fig2" data-toggle="collapse">+</button></div>
+    <div class="panel-title">Subscriptions - Task at Placer<button type="button" class="btn btn-default" style="float: right;" data-target="#fig10" data-toggle="collapse">+</button></div>
   </div>
   <div id="fig2" class="panel-collapse collapse">
     <div class="panel-body">
