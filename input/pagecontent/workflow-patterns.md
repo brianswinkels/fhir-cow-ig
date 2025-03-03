@@ -12,16 +12,12 @@ After a request has been created, this section describes how a fulfiller for tha
 This section also describes how potential fulfillers may request additional information about the requested service, which may be important to their determining if they will accept the request for service. 
 
 * **Cancelling and modifying orders**  
-This section describes how placers and fulfillers may modify a request once it has been created.
-
-This includes:
-+ A placer cancelling a request before service has begun
-+ A placer requesting that an in-progress request for service be cancelled
-+ A fulfiller proposing an alternative service back to the placer
-+ A fulfiller electing to perform a more specific service under their own authority
-+ A fulfiller informing a placer that they can no longer perform a service
-
-This section also provides examples for some more complex workflows, such as a fulfiller indicating an unsuccessful attempt to perform a service. 
+This section describes how placers and fulfillers may modify a request once it has been created. This includes:
+    * A placer cancelling a request before service has begun
+    * A placer requesting that an in-progress request for service be cancelled
+    * A fulfiller proposing an alternative service back to the placer
+    * A fulfiller electing to perform a more specific service under their own authority
+    * A fulfiller informing a placer that they can no longer perform a service
 
 * **Order grouping**  
 This section addresses how multiple requests for service may be communicated and, briefly, how dependencies between requests may be communicated and coordinated. This section is informative. 
