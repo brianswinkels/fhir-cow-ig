@@ -109,7 +109,7 @@ Implementations may choose to address these in different ways.
 ### Brief Survey of Mechanisms for Pushing FHIR Content 
 This section is provided for context and provides a brief overview of mechanisms available to push content from one actor to antoehr via FHIR. 
 
-** POST of a resource (RESTful FHIR Creates or Updates): **
+**POST of a resource (RESTful FHIR Creates or Updates):**
 * This mechanism may be used alongside others. It requires the availability of FHIR servers.
 * Actors need to pre-coordinate where the FHIR resources of interest (serving as the source-of-truth) will be hosted within the exchange ecosystem, when the resources should be posted, who may update them, and under what circumstances.
 * Note that posting of a resource may require more complex supporting transactions. For example, to POST a ServiceRequest, a client must first obtain the FHIR ID that will be used for ServiceRequest.subject (such as a Patient's FHIR ID on the target server).
