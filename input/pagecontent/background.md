@@ -82,7 +82,7 @@ One attempt to describe the different types of processes that may be called `ref
 
 All of these workflows assume that some healthcare provider, while working with a patient, decides that some action should be taken by another provider or healthcare organization. The receiving party may or may not be allowed, based on the business agreements, to reject or to modify the request for service, and the initiating party may or may not expect to receive some information back during or after the service.
 
-### Key Differences in Requirements Across Jurisdictions and Use-Cases Today:
+### Key Differences in Implementations Today:
 
 In reviewing other locale and care-domain specific work, this IG's authors have noted two factors which frequently motivate the creation of new exchange specifications for orders and referrals. These are:
 1. Considerations for minimizing data access
