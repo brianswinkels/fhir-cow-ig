@@ -112,7 +112,7 @@ This section is provided for context and provides a brief overview of mechanisms
 **POST of a resource (RESTful FHIR Creates or Updates):**
 * This mechanism may be used alongside others. It requires the availability of FHIR servers.
 * Actors need to pre-coordinate where the FHIR resources of interest (serving as the source-of-truth) will be hosted within the exchange ecosystem, when the resources should be posted, who may update them, and under what circumstances.
-* Note that posting of a resource may require more complex supporting transactions. For example, to POST a ServiceRequest, a client must first obtain the FHIR ID that will be used for ServiceRequest.subject (such as a Patient's FHIR ID on the target server).
+* Note that posting of a resource may require more complex supporting transactions. For example, to support a Placer POSTing a ServiceRequest, the placer and fulfiller must coordinate on the expectations for the FHIR ID used for the ServiceRequest.subject (such as whether the Client is expected to first perform a patient.$match to obtain the target server's FHIR ID for the patient, or if instead the Server should be capable of performing a match themselves).
 
 **Batch or Transaction bundles:**
 * These may operate similar to the RESTful Create and Update described above, but provide a mechanism for a client to submit several transactions as a set, which can reduce network traffic. This guide does not explore this option in detail.
