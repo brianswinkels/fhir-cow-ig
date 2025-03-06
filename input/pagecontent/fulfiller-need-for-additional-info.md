@@ -19,7 +19,7 @@ Several features of the Subscriptions framework can be used to help with this. A
 
 ### Requesting Additional Information Asynchronously via a Letter Flow with Status Update
 
-A fulfiller may find that additional information is needed that may only be obtained by communicating with the Placer asynchronously. While waiting for this information, the Fulfiller SHOULD update the status of their shared coordination Task to indicate this by updating Task.businessStatus to an appropriate status. 
+A fulfiller may find that additional information is needed that may only be obtained by communicating with the Placer asynchronously. While waiting for this information, the Fulfiller SHOULD update the status of their shared coordination Task to indicate this by updating Task.businessStatus to an appropriate status. Task.status must be at a status of Received if the fulfiller is still determining their ability to perform the request.(TODO - decide if this could be needed after Except). 
 
 Fulfillers MAY specify the information which they are awaiting using Task.statusReason. Fulfillers may also indicate what information is needed by creating additional Task resources with:
     * Commmunication.partOf referencing the shared coordination Task
